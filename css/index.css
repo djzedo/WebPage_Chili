@@ -100,10 +100,9 @@ input, select {
     border: 0px;
 }
 
-hr {
-    border-top: 1px solid blue;
-    height: 1px;
-    display: block;
+.hr {
+    border-top: 1px solid #a91717;
+            width: 100%;
 }
 
 #fondo{
@@ -181,13 +180,18 @@ hr {
     
 }
 
+.para2{
+    font-family: "Arial";
+    float: left;
+}
+
 #ing{
     padding-left: 20px;
 }
 
-#pixelp{
+.pixelp{
     font-weight: bold;
-    text-decoration: none;
+    text-decoration: none !important;
     color: black;
     overflow: hidden;
 }
@@ -197,11 +201,15 @@ a:hover{
 }
 
 #bod{
+    
+    
 
 }
 
 #abo{
     max-width:100%;
+    position: relative;
+    float: right;
 }
 
 #copa{
