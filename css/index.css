@@ -1,0 +1,135 @@
+#titulo{
+    background-color: black;
+    border: 0px;
+}
+
+#fondo{
+    background-color: black;
+}
+
+#TopMenu{
+ 
+    height: 70px;
+    width: 100%;
+    background-color: #E10707;
+    font-family: "verdana";
+  
+}
+
+#btn{
+    background-color: #E10707;
+    font-family: "verdana";
+    color: white;
+    border: none;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 60px;
+    font-size: 20px;
+    overflow: hidden;
+
+}
+
+#btnac{
+    display: block;
+    width: 100%;
+    background-color: #E10707;
+    font-family: "verdana";
+    color: white;
+    border: none;
+    overflow: hidden;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#btn77{
+    display: block;
+    width: 100%;
+    font-family: "verdana";
+    border: none;
+    overflow: hidden;
+    font-weight: bold;
+    
+    
+}
+
+#fondointermedio{
+    border: 0px;
+    height: 12px;
+    background-image: url(../img/barrita.png);
+}
+
+#video-background{
+    
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    padding-top: 0px;
+    width: auto;
+    height: auto;
+    min-height: 100%;
+    min-width: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.para{
+    font-family: "Arial";
+    
+}
+
+#ing{
+    padding-left: 20px;
+}
+
+#pixelp{
+    text-decoration: none;
+    color: black;
+    overflow: hidden;
+}
+
+#pixelp a{
+     text-decoration: underline !important;
+}
+
+#pixelp a:hover{
+    color: aqua !important;
+}
+
+#bod{
+
+}
+
+#abo{
+    max-width:100%;
+}
+
+#copa{
+    background-image: url(../img/copas2.png);
+    text-align: center;
+    font-size: 150px;
+    font-weight: bold;
+    color: black;
+    max-width:100%;
+}
+
+#copas{
+    max-width:100%;
+}
+
+#back{
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+#back2{
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }

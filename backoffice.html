@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html lang="es" id="fondo">
+
+<meta charset="UTF-8">
+    
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<?php
+      $user=$_POST['user']; 
+      $pass=$_POST['pass'];
+      $user = stripcslashes($user);
+      $pass = stripcslashes($pass);
+      $user = mysql_real_escape_string($user);
+      $pass = mysql_real_escape_string($pass);
+
+      //connect server y DB
+      mysql_connect("mysql.hostinger.es","u944924796_wp","trevize1");
+      mysql_select_db("u944924796_chili");
+      
+      $result = mysql_query("SELECT * FROM users_tbl WHERE user = '$user' and pass = '$pass'") 
+                or die("failed to query database". mysql_error());
+      $row = mysql_fetch_array($result);
+      if($row['user'] == $user && $row['pass'] == $pass){
+          header("location: portal.html");
+          echo "login success, welcome " .$row['user'];
+      }esle{
+          echo "failed to login";
+      }
+
+      /*$con = mysqli_connect("mysql.hostinger.es", "u944924796_wp", "trevize1", "u944924796_chili");
+  $user=$_POST['user']; 
+  $pass=$_POST['pass'];
+  $statement = mysqli_prepare($con,"SELECT * FROM users_tbl WHERE user = ? and pass = ?");
+  mysqli_stmt_blind_param($statemente, "ss", $user, $pass);
+  mysqli_stmt_execute($statement);
+  
+  mysqli_stmt_store_result($statement);
+  mysqli_stmt_blind_result($statement, $user, $pass);
+
+  $usera = array[];
+  
+  while(mysqli_stmt_fetch($statemente)){
+      $usera[user] = $user;
+      $usera[pass] = $pass;
+  }
+  if($usera[0] == $user && $usera[1] == $pass){
+      header("location: portal.html");
+  }else{
+      header("location: portal.html");
+  }
+
+  //echo json_encode($user);
+
+  mysqli_stmt_close($statemente);
+
+  mysqli_close($con);*/
+
+?>
+
+  <head>
+    <title>Chili System Consultants</title>
+    
+      
+    <div id="titulo">  
+        <a href="index.html"><img src="img/logomenutransparente.png"/></a>
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="btn">Ingresar</button>
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+
+          <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Ingresar</h4>
+              </div>
+             <div class="modal-body">
+               <form method="POST" action="">
+                 <div class="row" id="ing">
+                 <label for="user" class="ui-hidden-accessible">Usuario:</label>
+                 <input type="text" name="user" id="user" placeholder="Usuario" required>
+                 </div>
+                 <div class="row" id="ing">
+                 <label for="pass" class="ui-hidden-accessible">Contraseña:</label>
+                 <input type="password" name="pass" id="pass" placeholder="Contraseña" required>
+                 </div>
+                 <input type="submit" class="btn btn-default" data-inline="true" id="btn" value="Ingresar">
+                 <button type="button" class="btn btn-default" id="btn" data-dismiss="modal" style="padding-rigth: 50px">Cerrar</button>
+               </form>
+             </div>
+           </div>
+
+         </div>
+       </div>
+        
+    </div>    
+      <?php echo $result; ?> 
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      
+    
+         
+      
+    <div id="TopMenu" class="container">
+      <div class="row" >
+        <div class="col-sm-3">
+          <input type="button" id="btn" data-toggle="collapse" data-target="#Software" value="Software" >
+          <div id="Software" class="collapse out">
+          <br>
+          <br>
+          <br>
+          <a href="pixelpoint.html" id="pixelp"><p class="para"> <strong> PAR<sup>®</sup>PixelPoint<sup>®</sup>POS </strong></p></a>
+          <video autobuffer autoloop loop nocontrols autoplay width="120" height="100">
+          <source src="PixelLogo.mp4" type="video/mp4">
+	         </video> <p align="justify" class="para">No importa si está operando un restaurante de servicio rápido, casual o restaurante de cena formal, PAR<sup>®</sup>PixelPoint<sup>®</sup> POS le ofrece características robustas en una solución fácil de implementar y fácil de usar.</p>
+
+           <hr>
+
+          <a href="backoffice.html" id="pixelp"><p class="para"><strong>PAR<sup>®</sup>PixelPoint<sup>®</sup>BackOffice<sup>®</sup></strong></p></a>
+          <img src="img/POSBO.jpg" width="120" height="90">
+          <br>
+          <br>
+          <p align="justify" class="para">Diseñado para directores de empresas, de campo y de sitio, Operaciones de Información proporciona visibilidad en todas las tiendas y es una herramienta de toma de decisiones indispensables. Acceso a un panel ejecutivo, se obtiene una visibilidad clara de finanzas, análisis de ventas, marketing, inventario, y la fuerza laboral.</p>
+        </div>
+
+    </div>
+        <div class="col-sm-3">
+          <input type="button" id="btn" data-toggle="collapse" data-target="#Hardware" value="Hardware">
+          <div id="Hardware" class="collapse out">
+          <br>
+          <br>
+          <br>
+          <a href="everserv77.html"><p class="para"> <strong> EverServ<sup>®</sup>7700</strong></p></a>
+          <img src="img/7700.png" width="120" height="90">
+          <br>
+          <br>
+          <p align="justify" class="para">El diseño renovado del EverServ<sup>®</sup>7700 familia del hardware de punto de venta, se construye con la misma durabilidad con la que PAR<sup>®</sup> es conocida; para su negocio es una decisión importante que afecta el nivel de servicio y rendimiento que ofrecen a sus clientes pero en un diseño innovador y elegante.</p>
+
+          <hr>
+
+          <a href="everserv72.html"><p class="para"> <strong> EverServ<sup>®</sup>7200</strong></p></a>
+          <img src="img/7200.png" width="120" height="90">
+          <br>
+          <br>
+          <p align="justify" class="para">La EverServ<sup>®</sup>7200 está hecha para funcionar en ambientes ásperos que involucran trato rudo y derrame de líquidos. El contemporáneo y elegante diseño de la 7200 la convierte en la mejor opción para operadores conscientes de la importancia de la imagen. La arquitectura de siguiente generación de alto rendimiento de la 7200, soporta aplicaciones demandantes y ofrece la velocidad que usted necesita para mejorar la atención a sus clientes.</p>
+
+           <hr>
+
+          <a href="everserv500.html"><p class="para"> <strong> EverServ<sup>®</sup>500</strong></p></a>
+          <img src="img/500.png" width="120" height="90">
+          <br>
+          <br>
+          <p align="justify" class="para">El diseño ofrece una resistente carcasa de alto impacto que se construye para soportar duras condiciones en restaurantes y locales comerciales con un funcionamiento continuo. El diseño de la EverServ<sup>®</sup>500 sin ventilador es silencioso, ofrece un bajo consumo de energía y minimiza el mantenimiento.
+          </p>
+
+          <hr>
+
+          <a href="tablet10.html"><p class="para"> <strong> PAR<sup>®</sup>Tablet 10"</strong></p></a>
+          <img src="img/Tablet10.jpg" width="120" height="90">
+          <br>
+          <br>
+          <p align="justify" class="para">Ya sea que usted esté buscando ampliar su solución de punto de venta, mejorar la experiencia del cliente o mejorar la eficiencia de sus operaciones, la tablet 10 de PAR<sup>®</sup> es el ajuste ideal. La tablet es el equilibrio perfecto entre tamaño, fiabilidad y facilidad que se celebra en una mano.
+          </p>
+
+
+
+          </div>
+         
+        </div>
+        <div class="col-sm-2">
+          <input type="button" id="btn" data-toggle="collapse" data-target="#Servicios" value="Servicios">
+          <div id="Servicios" class="collapse out">
+          <br>
+          <br>
+          <br>
+          <img src="img/Services4.png">
+          <br>
+          <br>
+          <p align="justify" class="para"><strong>Entrenamiento</strong>:
+          <br>
+          Confíe en el personal de Chili System el cual está certificado para brindar capacitación y entrenamiento en los módulos del software POS para que usted pueda aprovechar al máximo las ventajas y beneficios de PAR EverServ PixelPoint.</p>
+          <br>
+          <br>
+          <p align="justify" class="para"><strong>Modelo de Administración</strong>:
+          <br>
+          Usted puede dejar la administración del Software PAR EverServ PixelPoint en manos expertas con el objetivo de no incurrir en gastos adicionales de personal e infraestructura, ya que Chili System provee integralmente este servicio.</p>
+          <br>
+          <br>
+          <p align="justify" class="para"><strong>Contratos</strong>:
+          <br>
+          Tenga la tranquilidad de tener la operación de su negocio cubierto a través de los beneficios que contienen nuestros diferentes contratos para que el funcionamiento de su negocio no pare de crecer.</p></div>
+        </div>
+       
+        <div class="col-sm-2">
+          <a href="compania.html"><input type="button" id="btn" value="Compañia"></a>
+        </div>
+        <div class="col-sm-2">
+          <a href="contacto.html"><input type="button" id="btn" value="Contacto"></a>
+        </div>
+      </div>
+    </div>
+  </head>
+
+  <body>
+      <div id="fondointermedio"></div>
+      <h4><p class="para"><strong>PAR<sup>®</sup>PixelPoint<sup>®</sup>BackOffice<sup>®</sup></strong></p></h4>
+      <div class="row">
+        <div class="col-sm-4">
+          <br>
+          <img src="img/backoffice3.jpg" id="abo">
+        </div>
+        <div class="col-sm-4">
+        <br>
+        <br>
+        <p align="justify">Mejore la toma de decisiones y el control de la presentación de informes en toda la empresa en línea utilizando el PAR EverServ ® Operaciones Reporting software.</p>
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-sm-6">
+          <img src="img/backoffice4.jpg"  id="abo">
+        </div>
+        <div class="col-sm-4">
+          <p align="justify">Si usted es el dueño / operador de una sola unidad o un gerente responsable de miles de sitios, la comprensión del desempeño actual del restaurante es fundamental para el éxito del negocio en curso. EverServ Operaciones de informes es un PAR-organizada, Software-as-a-Service (SaaS) servicio de información de la empresa basada en la Web que consolida los datos de todos los restaurantes y puestos de TI a un portal Web seguro. Diseñado para directores de empresas, de campo y de sitio, Operaciones de Información proporciona visibilidad en todas las tiendas y es una herramienta de toma de decisiones indispensables. Acceso a un panel ejecutivo, se obtiene una visibilidad clara de finanzas, análisis de ventas, marketing, inventario, y la fuerza laboral.</p>
+        </div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-sm-3" >
+          <img src="img/backoffice2.jpg">
+        </div>
+        <br>
+        <br>
+        <div class="col-sm-7">
+          <p align="justify" style="color: white;">Apoyo a las aplicaciones PAR EverServ Patrimonio POS PAR EverServ QSR y Operaciones de Información proporciona información para la acción que se puede utilizar para tomar decisiones empresariales y alertas rápidas mejor informados a los gestores de los problemas que surgen en diversos lugares para la acción inmediata. Tablero ejecutivo de la solución ofrece a los usuarios en una mirada la visibilidad de las métricas clave de rendimiento. Integrar Operaciones de Información para las aplicaciones empresariales existentes, tales como finanzas, nómina y sistemas de la cadena de suministro para crear un sistema de negocio a medida para satisfacer las necesidades de sus operaciones únicas.<br><br>Para obtener información procesable que necesita para gestionar mejor sus operaciones cuando y donde usted lo necesita-seleccionar PAR Operaciones EverServ Reporting.</p>
+        </div>
+      </div>
+      <input type="button" id="btnac" data-toggle="collapse" data-target="#Beneficios" value="Beneficios" >
+      <div id="Beneficios" class="collapse out">
+        <br>
+        <br>
+        <p align="justify" id="back">
+          • Mejora de la visibilidad de las operaciones - tablero ejecutivo de Operaciones de Información le permite ver una instantánea de todo el rendimiento de su empresa o profundizar en las regiones o las operaciones de tienda individual.
+        <br>
+        <br>
+          • Mejora de la toma de decisiones - Visibilidad de información procesable sobre las operaciones de los sitios remotos le permite reaccionar con rapidez y tomar mejores decisiones.
+        <br>
+        <br>
+          • Accesible en cualquier lugar - Alojado en un portal Web, los informes de sus operaciones 'se puede acceder en cualquier lugar que tiene un dispositivo con funciones de explorador Web.
+        <br>
+        <br>
+          • Fácil integración - Se integra fácilmente con otras aplicaciones empresariales (finanzas, nóminas y la cadena de suministro) y productos de Microsoft, como Excel.
+        <br>
+        <br>
+          • Tiene capacidad para el crecimiento futuro - Construido sobre una arquitectura orientada a servicios de Información de Operaciones tiene la flexibilidad y escalabilidad para crecer con sus operaciones.
+        <br>
+        <br>
+        </p>
+      </div>
+      <input type="button" id="btnac" data-toggle="collapse" data-target="#Caracteristicas" value="Características" >
+      <div id="Caracteristicas" class="collapse out">
+        <br>
+        <br>
+        <p align= "justify" id="back2"><strong>Dashboard Ejecutivo </strong>- Proporciona una visión general de las métricas de negocio:
+        <br>
+        <br>
+            • Representación gráfica de datos.
+        <br>
+            • Drill Down Capability.
+        <br>
+            • Opciones tailorable
+        <br>
+            &nbsp;&nbsp;&nbsp;- Categorías de resumen definidos por el usuario
+        <br>
+            &nbsp;&nbsp;&nbsp;- Alertas codificadas por color con base en los límites definidos por el usuario
+        <br>
+            &nbsp;&nbsp;&nbsp;- Diseño configurable
+        <br>
+        <br>
+            <strong>Informes Operacionales </strong>- Información sobre el emplazamiento y el funcionamiento de la empresa:
+        <br>
+        <br>
+            • Las vistas de datos
+        <br>
+            &nbsp;&nbsp;&nbsp;- Rejilla estándar
+        <br>
+            &nbsp;&nbsp;&nbsp;- Rejilla Drill-down
+        <br>
+            &nbsp;&nbsp;&nbsp;- Dashboard con cuatro tablas y 24 indicadores clave de rendimiento
+        <br>
+            &nbsp;&nbsp;&nbsp;- Exportar a Excel
+        <br>
+            • On-the-Fly Modificaciones
+        <br>
+            &nbsp;&nbsp;&nbsp;- Selecciones de rango de fecha
+        <br>
+            &nbsp;&nbsp;&nbsp;- Agrupación personalizada
+        <br>
+            &nbsp;&nbsp;&nbsp;- Ordenamiento de las columnas, el posicionamiento y la clandestinidad
+        <br>
+            &nbsp;&nbsp;&nbsp;- Resaltado de datos y mapeo de calor
+        <br>
+            • Las exportaciones para el Intercambio de Información
+        <br>
+            &nbsp;&nbsp;&nbsp;- Sobresalir
+        <br>
+            &nbsp;&nbsp;&nbsp;- Email
+        <br>
+        <br>
+            <strong>Arquitectura Avanzada </strong>- Garantizando la fiabilidad de la aplicación:
+        <br>
+        <br>
+            • Arquitectura orientada a servicios
+        <br>
+            • Diseño de varios niveles
+        <br>
+            • Base de datos de SQL Server
+        <br>
+            • Sistema de transporte de archivos
+        <br>
+            &nbsp;&nbsp;&nbsp;- También disponible para el sitio para la transferencia de archivos corporativos
+        <br>
+        <br>
+            <strong>PAR Hosting </strong>- Elimina la aplicación y el esfuerzo de apoyo a los centros de datos del estado de la técnica:
+        <br>
+        <br>
+            • Redundancias incorporadas
+        <br>
+            • La seguridad física
+        <br>
+            • Supervisión por terceros automatizado
+        <br>
+            • Suscripción Precios
+        <br>
+        <br>
+            <strong>Informe general Set </strong>- Ofrece visión de las operaciones:
+        <br>
+        <br>
+            • Informes financieros
+        <br>
+            • Informes de Análisis / Rendimiento
+        <br>
+            • Informes de Marketing
+        <br>
+            • Informes de Inventario
+        <br>
+            • Informes de la Administración de TI / Apoyo
+        <br>
+            • Informes personalizados
+        <br>
+        <br>
+            <strong>Sistema de acceso seguro </strong>- Protege la información de negocios:
+        <br>
+        <br>
+            • Company, la función y la seguridad individual
+        <br>
+            • Acceso Reportar / datos basado en el código de trabajo
+        <br>
+        <br>
+        <br>
+        </p>
+      </div>
+  </body>
+</html>	
