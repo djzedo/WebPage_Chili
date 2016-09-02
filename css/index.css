@@ -85,12 +85,25 @@ input, select {
     vertical-align:middle;
 }
 
-/*Fin CSS Reset*/
-
+/*Fin CSS Reset >>>>>>>>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+*/
 
 #titulo{
     background-color: black;
     border: 0px;
+}
+
+hr {
+    border-top: 1px solid blue;
+    height: 1px;
+    display: block;
 }
 
 #fondo{
@@ -98,7 +111,6 @@ input, select {
 }
 
 #TopMenu{
- 
     height: 70px;
     width: 100%;
     background-color: #E10707;
@@ -174,17 +186,14 @@ input, select {
 }
 
 #pixelp{
+    font-weight: bold;
     text-decoration: none;
     color: black;
     overflow: hidden;
 }
 
-#pixelp a{
-     text-decoration: underline !important;
-}
-
-#pixelp a:hover{
-    color: aqua !important;
+a:hover{
+    color: red !important;
 }
 
 #bod{

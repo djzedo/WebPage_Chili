@@ -58,15 +58,19 @@
 ?>
 
   <head>
-    <title>Chili System Consultant</title>
+    <title>Chili System Consultants</title>
     
       
     <div id="titulo">  
         <a href="index.html"><img src="img/logomenutransparente.png"/></a>
+        
+        <!--Boton de login-->
         <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="btn">Ingresar</button>
+        <!--/Boton de login-->
+        
+        <!--Ventana Emergente Login-->
         <div id="myModal" class="modal fade" role="dialog">
           <div class="modal-dialog">
-
           <!-- Modal content-->
             <div class="modal-content">
               <div class="modal-header">
@@ -90,33 +94,35 @@
            </div>
 
          </div>
-       </div>
-        
+       </div>        
     </div>    
-      <?php echo $result; ?> 
+    <!--/Ventana Emergente Login--> 
+     
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      
     
-         
-      
+    <!--Menu Principal-->  
     <div id="TopMenu" class="container">
-      <div class="row" >
+      <div class="row">
         <div class="col-sm-3">
           <input type="button" id="btn" data-toggle="collapse" data-target="#Software" value="Software" >
-          <div id="Software" class="collapse out">
+            <div id="Software" class="collapse out">
           <br>
           <br>
           <br>
-          <a href="pixelpoint.html" id="pixelp">PAR<sup>®</sup>PixelPoint<sup>®</sup>POS</a>
+                
+          <a href="pixelpoint.html" id="pixelp"><p>PAR<sup>®</sup>PixelPoint<sup>®</sup>POS</p></a>
+                
           <video autobuffer autoloop loop nocontrols autoplay width="120" height="100">
           <source src="PixelLogo.mp4" type="video/mp4">
-	         </video> <p align="justify" class="para">No importa si está operando un restaurante de servicio rápido, casual o restaurante de cena formal, PAR<sup>®</sup>PixelPoint<sup>®</sup> POS le ofrece características robustas en una solución fácil de implementar y fácil de usar.</p>
+	         </video> 
+          
+          <p align="justify" class="para">No importa si está operando un restaurante de servicio rápido, casual o restaurante de cena formal, PAR<sup>®</sup>PixelPoint<sup>®</sup> POS le ofrece características robustas en una solución fácil de implementar y fácil de usar.</p>
 
-           <hr>
+          <hr>
 
           <a href="backoffice.html" id="pixelp"><p class="para"><strong>PAR<sup>®</sup>PixelPoint<sup>®</sup>BackOffice<sup>®</sup></strong></p></a>
           <img src="img/POSBO.jpg" width="120" height="90">
