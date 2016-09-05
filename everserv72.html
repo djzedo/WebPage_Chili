@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+
+<html lang="es" id="fondo">
+
+<meta charset="UTF-8">
+    
+<link rel="stylesheet" type="text/css" href="css/index.css">
+<?php
+      $user=$_POST['user']; 
+      $pass=$_POST['pass'];
+      $user = stripcslashes($user);
+      $pass = stripcslashes($pass);
+      $user = mysql_real_escape_string($user);
+      $pass = mysql_real_escape_string($pass);
+
+      //connect server y DB
+      mysql_connect("mysql.hostinger.es","u944924796_wp","trevize1");
+      mysql_select_db("u944924796_chili");
+      
+      $result = mysql_query("SELECT * FROM users_tbl WHERE user = '$user' and pass = '$pass'") 
+                or die("failed to query database". mysql_error());
+      $row = mysql_fetch_array($result);
+      if($row['user'] == $user && $row['pass'] == $pass){
+          header("location: portal.html");
+          echo "login success, welcome " .$row['user'];
+      }esle{
+          echo "failed to login";
+      }
+
+      /*$con = mysqli_connect("mysql.hostinger.es", "u944924796_wp", "trevize1", "u944924796_chili");
+  $user=$_POST['user']; 
+  $pass=$_POST['pass'];
+  $statement = mysqli_prepare($con,"SELECT * FROM users_tbl WHERE user = ? and pass = ?");
+  mysqli_stmt_blind_param($statemente, "ss", $user, $pass);
+  mysqli_stmt_execute($statement);
+  
+  mysqli_stmt_store_result($statement);
+  mysqli_stmt_blind_result($statement, $user, $pass);
+
+  $usera = array[];
+  
+  while(mysqli_stmt_fetch($statemente)){
+      $usera[user] = $user;
+      $usera[pass] = $pass;
+  }
+  if($usera[0] == $user && $usera[1] == $pass){
+      header("location: portal.html");
+  }else{
+      header("location: portal.html");
+  }
+
+  //echo json_encode($user);
+
+  mysqli_stmt_close($statemente);
+
+  mysqli_close($con);*/
+
+?>
+
+  <head>
+    <title>Chili System Consultants</title>
+    
+      
+    <div id="titulo">  
+        <a href="index.html"><img src="img/logomenutransparente.png"/></a>
+        
+        <!--Boton de login-->
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="btn">Ingresar</button>
+        <!--/Boton de login-->
+        
+        <!--Ventana Emergente Login-->
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
+          <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Ingresar</h4>
+              </div>
+             <div class="modal-body">
+               <form method="POST" action="">
+                 <div class="row" id="ing">
+                 <label for="user" class="ui-hidden-accessible">Usuario:</label>
+                 <input type="text" name="user" id="user" placeholder="Usuario" required>
+                 </div>
+                 <div class="row" id="ing">
+                 <label for="pass" class="ui-hidden-accessible">Contraseña:</label>
+                 <input type="password" name="pass" id="pass" placeholder="Contraseña" required>
+                 </div>
+                 <input type="submit" class="btn btn-default" data-inline="true" id="btn" value="Ingresar">
+                 <button type="button" class="btn btn-default" id="btn" data-dismiss="modal" style="padding-rigth: 50px">Cerrar</button>
+               </form>
+             </div>
+           </div>
+
+         </div>
+       </div>        
+    </div>    
+    <!--/Ventana Emergente Login--> 
+     
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <!--Menu Principal-->  
+      <!--Menu Software--> 
+    <div id="TopMenu" class="container">
+      <div class="row">
+        <div class="col-sm-3">
+          <input type="button" id="btn" data-toggle="collapse" data-target="#Software" value="Software" >
+            
+            <div id="Software" class="collapse out">
+          <br>
+          <br>
+          <br>
+                
+          <a href="pixelpoint.html" class="pixelp"><p>PAR<sup>®</sup>PixelPoint<sup>®</sup>POS</p></a>
+                
+          <video autobuffer autoloop loop nocontrols autoplay width="120" height="100">
+          <source src="PixelLogo.mp4" type="video/mp4">
+	         </video> 
+          
+          <p align="justify" class="para">No importa si está operando un restaurante de servicio rápido, casual o restaurante de cena formal, PAR<sup>®</sup>PixelPoint<sup>®</sup> POS le ofrece características robustas en una solución fácil de implementar y fácil de usar.</p>
+
+          <hr class="hr">
+
+          <a href="backoffice.html" class="pixelp"><p>PAR<sup>®</sup>PixelPoint<sup>®</sup>BackOffice<sup>®</sup></p></a>
+          <img src="img/POSBO.jpg" width="120" height="90">
+          <br>
+          <br>
+                
+          <p align="justify" class="para">Diseñado para directores de empresas, de campo y de sitio, Operaciones de Información proporciona visibilidad en todas las tiendas y es una herramienta de toma de decisiones indispensables. Acceso a un panel ejecutivo, se obtiene una visibilidad clara de finanzas, análisis de ventas, marketing, inventario, y la fuerza laboral.</p>
+            
+          <!--/Menu Software-->    
+          </div>
+    </div>
+          
+          <!--Menu Hardware-->
+          <div class="col-sm-3">
+            <input type="button" id="btn" data-toggle="collapse" data-target="#Hardware" value="Hardware">
+                <div id="Hardware" class="collapse out">
+          <br>
+          <br>
+          <br>
+                    
+          <a href="everserv77.html" class="pixelp"><p>EverServ<sup>®</sup>7700</p></a>
+          <img src="img/7700.png" width="120" height="90">
+          <br>
+          <br>
+                    
+          <p align="justify" class="para">El diseño renovado del EverServ<sup>®</sup>7700 familia del hardware de punto de venta, se construye con la misma durabilidad con la que PAR<sup>®</sup> es conocida; para su negocio es una decisión importante que afecta el nivel de servicio y rendimiento que ofrecen a sus clientes pero en un diseño innovador y elegante.</p>
+
+          <hr class="hr">
+
+          <a href="everserv72.html" class="pixelp"><p>EverServ<sup>®</sup>7200</p></a>
+          <img src="img/7200.png" width="120" height="90">
+          <br>
+          <br>
+                    
+          <p align="justify" class="para">La EverServ<sup>®</sup>7200 está hecha para funcionar en ambientes ásperos que involucran trato rudo y derrame de líquidos. El contemporáneo y elegante diseño de la 7200 la convierte en la mejor opción para operadores conscientes de la importancia de la imagen. La arquitectura de siguiente generación de alto rendimiento de la 7200, soporta aplicaciones demandantes y ofrece la velocidad que usted necesita para mejorar la atención a sus clientes.</p>
+
+          <hr class="hr">
+
+          <a href="everserv500.html" class="pixelp"><p>EverServ<sup>®</sup>500</p></a>
+          <img src="img/500.png" width="120" height="90">
+          <br>
+          <br>
+                    
+          <p align="justify" class="para">El diseño ofrece una resistente carcasa de alto impacto que se construye para soportar duras condiciones en restaurantes y locales comerciales con un funcionamiento continuo. El diseño de la EverServ<sup>®</sup>500 sin ventilador es silencioso, ofrece un bajo consumo de energía y minimiza el mantenimiento.</p>
+
+          <hr class="hr">
+
+          <a href="tablet10.html" class="pixelp"><p> PAR<sup>®</sup>Tablet 10"</p></a>
+          <img src="img/Tablet10.jpg" width="120" height="90">
+          <br>
+          <br>
+                    
+          <p align="justify" class="para">Ya sea que usted esté buscando ampliar su solución de punto de venta, mejorar la experiencia del cliente o mejorar la eficiencia de sus operaciones, la tablet 10 de PAR<sup>®</sup> es el ajuste ideal. La tablet es el equilibrio perfecto entre tamaño, fiabilidad y facilidad que se celebra en una mano.</p>
+
+          </div>
+        </div>
+        <!--/Menu Hardware-->
+          
+        <!--Menu Servicios-->  
+        <div class="col-sm-2">
+          <input type="button" id="btn" data-toggle="collapse" data-target="#Servicios" value="Servicios">
+          <div id="Servicios" class="collapse out">
+          <br>
+          <br>
+          <br>
+              
+          <img src="img/Services4.png" >
+          <br>
+          <br>
+              <p class="pixelp">Entrenamiento:</p>
+              
+          <p align="justify" class="para">Confíe en el personal de Chili System, el cual está certificado para brindar capacitación e implementar los módulos del software POS para que usted pueda aprovechar al máximo las ventajas y beneficios de PAR<sup>®</sup>PixelPoint<sup>®</sup>POS.</p>
+            
+        <hr class="hr">
+              
+          <p class="pixelp">Modelo de Administración:</p>
+          
+          <p align="justify" class="para">Usted puede dejar la administración del Software PAR<sup>®</sup>PixelPoint<sup>®</sup>POS en manos expertas con el objetivo de no incurrir en gastos adicionales de personal e infraestructura, ya que Chili System provee integralmente este servicio.</p>
+              
+          <hr class="hr">      
+              
+          <p class="pixelp">Contratos:</p>
+          
+          <p align="justify" class="para">Tenga la tranquilidad de tener la operación de su negocio cubierto a través de los beneficios que contienen nuestros diferentes contratos para que el funcionamiento de su negocio no pare de crecer.</p></div>
+            
+        </div>
+        <!--/Menu Servicios--> 
+       
+        <div class="col-sm-2">
+          <a href="compania.html"><input type="button" id="btn" value="Compañia"></a>
+        </div>
+          
+        <div class="col-sm-2">
+          <a href="contacto.html"><input type="button" id="btn" value="Contacto"></a>
+        </div>
+          
+      </div>
+        
+    </div>
+    <!--/Menu Principal-->
+      
+  </head>
+
+  <body>
+      <div id="fondointermedio"></div>
+      <div class="row">
+      <div class="col-sm-10">
+      <h4><p class="para" style="text-align: center; font-size: 30px;"><strong>EverServ<sup>®</sup>7200</strong></p></h4>
+      <div class="container" id="contai">
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="img/front7200.png" alt="Chania" width="460" height="345">
+      </div>
+
+      <div class="item">
+        <img src="img/top7200.png" alt="Chania" width="460" height="345">
+      </div>
+    
+      <div class="item">
+        <img src="img/side7200.png" alt="Flower" width="460" height="345">
+      </div>
+
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+</div>
+</div>
+      <div class="row" id="btn77">
+          <div class="col-sm-3">
+      <input type="button" id="btnac" data-toggle="collapse" data-target="#Caracteristicas" value="PAR EverServ® 7200" >
+      <div id="Caracteristicas" class="collapse out">
+      <br>
+      <p align="justify" class="para">Diseño Avanzado, Confiabilidad Probada: Hardware de Punto de Venta EverServ 7200
+      <br>
+      <br>
+          Seleccionar el hardware de punto de venta para su negocio es una importante decisión que impacta, durante muchos años, el nivel de servicio que usted ofrece a sus huéspedes. Mientras que su negocio requiere un sistema POS que sea de uso pesado y  la confiabilidad con la que puede contar, usted no querría renunciar a la imagen de la compañía. Ahora usted puede tener una terminal de punto de venta con lo mejor de los dos mundos – ¡elegancia y durabilidad!
+      <br>
+      <br>
+      <br>
+          La totalmente rediseñada nueva familia de hardware de Punto de Venta PAR EverServ 7000, está compuesta por la misma durabilidad por la cual PAR se distingue, pero con un innovador y elegante diseño que ofrece la operación que usted necesita.  La EverServ 7200 está hecha para funcionar en ambientes ásperos que involucran trato rudo y derrame de líquidos.  El contemporáneo y elegante diseño de la 7200 la convierte en la mejor opción para operadores conscientes de la importancia de la imagen. La arquitectura de siguiente generación de alto rendimiento de la 7200, soporta aplicaciones demandantes y ofrece la velocidad que usted necesita para mejorar la atención a sus clientes.
+      <br>
+      <br>      
+      </p>
+      </div>
+      </div>
+      <div class="col-sm-4">
+          <input type="button" id="btnac" data-toggle="collapse" data-target="#Especificaciones" value="Especificaciones" >
+      <div id="Especificaciones" class="collapse out">
+          <br>
+          <p align="justify" class="para"><strong>CPU</strong>
+          <br>
+              Intel® Atom™ D2550 1.86 GHz dual core (Cedar Trail Architecture)
+          <br>
+          <br>
+              <strong>Memoria</strong>
+          <br>
+              4 GB DDR3-SODIMM (tipo laptop)
+          <br>
+          <br>
+              <strong>Disco Duro</strong>
+          <br>
+              2.5″ SATA, 320 GB<sup>1</sup>
+          <br>
+          <br>
+              <strong>LCD</strong>
+          <br>
+              15”
+          <br>
+          <br>
+              <strong>Touch screen</strong>
+          <br>
+              5-Wire Resistive
+          <br>
+          <br>
+              <strong>PC Bios</strong>
+          <br>
+              AMI BIOS APTIO EFI y SMBIOS
+          <br>
+          <br>
+              <strong>LAN</strong>
+          <br>
+              10/100/1000 Mbit Ethernet
+          <br>
+          <br>
+              <strong>Fuente de Poder</strong>
+          <br>
+              19V/150W Fuente de Alimentación Externa
+          <br>
+          <br>
+              <strong>Información Ambiental</strong>
+          <br>
+              Ambiente Operacional
+          <br>
+              Temperatura: 41 to 104° F (5 to 40° C)
+          <br>
+              Humedad Relativa: 10-90% (Non-condensing)Tránsito Ambiental
+          <br>
+              Temperatura: 0 to 158° F (-18 to 70° C)
+          <br>
+              Humedad Relativa: 5-95% (Non-condensing)
+          <br>
+          <br>
+              <strong>Sistema Operativo</strong>
+          <br>
+              Windows Embedded POSReady 7
+          <br>
+              Windows 7 Professional for Embedded Systems
+          <br>
+              Windows 7 Professional
+          <br>
+          <br>
+              <strong>Puertos y Expansiones</strong>
+          <br>
+              LED stacked indicators – HDD, PWR
+          <br>
+              1 – 12V power output jack 2A
+          <br>
+              1 – PWR Conn input 19V
+          <br>
+              1 – USB 2.0 24V powered
+          <br>
+              4 – USB ver. 2.0
+          <br>
+              1 – DVI-I – Video out, supporting both DVI and VGA monitors
+          <br>
+              2 – RJ12 puertos de Cajón de Dinero
+          <br>
+              5 – COM puertos:
+          <br>
+              2 – COMs (RJ45)
+          <br>
+              2 – COMs (RJ45) selectable for +5v or +12v
+          <br>
+              1 – COM Circular DIN for serial customer display options
+          <br>
+              1 – RJ45 LAN 10/100/1000Mbit
+          <br>
+              1 – Power on/off switch
+          <br>
+              1 – PS/2 interconnect
+          <br>
+          <br>
+              <strong>Opciones</strong>
+          <br>
+              Segundo Disco Duro de 320 GB
+          <br>
+              Solid State Drive
+          <br>
+              International (256×64) Double Byte Display
+          <br>
+              Wireless
+          <br>
+              Bluetooth
+          <br>
+              Biometrics
+          <br>
+              Dallas Key
+          <br>
+          <br>
+              <strong>Opciones de Pantalla Trasera para Clientes</strong>
+          <br>
+              5×7″ Card Holder
+          <br>
+              2×20 VFD Display
+          <br>
+              12″ Customer Displa
+          <br>
+          <br>
+              <strong>Certificaciones del Producto</strong>
+          <br>
+              cULus, FCC Class A, RoHS
+          <br>
+              WEEE, CB (IEC), CE, CCC
+          <br>
+              BSMI, C-Tick/RCM
+          <br>
+              IRAM/S-MARK, KC, SASO
+          <br>
+              KUCAS, VCCI, PSE
+          <br>
+          <br>
+              <strong>Dimensiones(Alto x Ancho x Profundo)</strong>
+          <br>
+              15.7 x 15.1 x 10.6 Pulgadas (40 x 38.4 x 26.9 cm)<sup>2</sup>
+          <br>
+          <br>
+              <strong>Peso</strong>
+          <br>
+              25.5 lb (11.6 kg)<sup>2</sup>
+          <br>
+          <br>
+              <sup>1</sup> GB equivale a 1024 Megabytes; la capacidad actual puede variar con el material precargado y el entorno operativo será menor.
+          <br>
+              <sup>2</sup> Nota: Las dimensiones y peso arriba mencionados están basados en una configuración típica de sistema. Las dimensiones y peso pueden variar dependiendo de la posición y ángulo del display LCD principal y si los dispositivos opcionales están integrados a la terminal POS.
+          <br>
+          <br>
+          </p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+        <input type="button" id="btnac" data-toggle="collapse" data-target="#Beneficios" value="Beneficios" >
+      <div id="Beneficios" class="collapse out">
+        <br>
+        <p align="justify" class="para"><strong>Confiabilidad Probada</strong>
+        <br>
+        <br>
+            <strong>Altos Estándares de Calidad </strong>– Diseñada y construída con los altos estándares de durabilidad por los que PAR se caracteriza.
+        <br>
+        <br>
+            <strong>Base Estable </strong>– Diseño con bajo centro de gravedad para aguantar la vibración sin impactar el funcionamiento.
+        <br>
+        <br>
+            <strong>A prueba de derrames </strong>– Construida para operar incluso cuando se derraman líquidos en la terminal.
+        <br>
+        <br>
+        <br>
+            <strong>Imagen Mejorada</strong>
+        <br>
+        <br>
+            <strong>Diseño Elegante </strong>– Las líneas limpias y un look contemporáneo mejoran la percepción de clientes y asociados de la compañía. La configuración opcional de bajo perfil (low profit) elimina el tradicional hardware voluminoso entre el cliente y el prestador de servicios, maximizando la interacción social para mejorar el servicio.
+        <br>
+        <br>
+        <br>
+            <strong>Utilidad Superior</strong>
+        <br>
+        <br>
+            <strong>Centralización E/S </strong>– La conectividad de puertos de E/S totalmente centralizada hace más fácil manejar cables, actualizar componentes y proporcionar conectividad para múltiples configuraciones.
+        <br>
+        <br>
+            <strong>Fácil Acceso </strong>– Los componentes mayores como almacenamiento (HD o SSD) y memoria, son de fácil acceso para reemplazos simplificados y mayor tiempo de actividad. Algunos componentes pueden ser accesados por el lado de la unidad sin necesidad de remover cables.
+        <br>
+        <br>
+            <strong>Administración Remota </strong>– Los diagnósticos remotos estándar de la industria y la administración de capacidades, reducen sus llamadas de help desk y visitas de servicio, dando la posibilidad de dar mantenimiento antes de que el dispositivo falle. Soporta y aprovecha la Tecnología de Administación Activa de Intel® (AMT).
+        <br>
+        <br>
+        <br>
+            <strong>Incremente sus ventas</strong>
+        <br>
+        <br>
+            <strong>Pantallas para Clientes </strong>– Pantallas traseras para clientes opcionales (Display Vacuum Fluorescent de 2 líneas x 20 caracteres o Display estático de 5″x7″ o Display para clientes de 12″) que aumentan las ventas y oportunidades de ventas cruzadas para aumentar sus números.
+        <br>
+        <br>
+        <br>
+            <strong>Bajo Costo Total de la Propiedad</strong>
+        <br>
+        <br>
+            <strong>Administración de Poder Avanzada </strong>– Las funciones avanzadas de Ahorro de Energía y modo auto-standby reducen dramáticamente el consumo general de energía.
+        <br>
+        <br>
+            
+        </p>
+    </div>
+      </div>
+    </div>
+  </body>
+    
+</html>

@@ -131,21 +131,22 @@ input, select {
 }
 
 #btnac{
-    display: block;
-    width: 100%;
     background-color: #E10707;
-    font-family: "verdana";
+    font-family: "verdana" !important;
     color: white;
     border: none;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 60px;
+    font-size: 20px;
     overflow: hidden;
-    font-size: 30px;
-    font-weight: bold;
+    width: 100%;
 }
 
 #btn77{
     display: block;
     width: 100%;
-    font-family: "verdana";
+    font-family: "verdana" !important;
     border: none;
     overflow: hidden;
     font-weight: bold;
@@ -176,7 +177,8 @@ input, select {
 }
 
 .para{
-    font-family: "Arial";
+    font-family: "verdana" !important;
+    padding-left: 60px;
     
 }
 
@@ -240,3 +242,7 @@ a:hover{
       width: 70%;
       margin: auto;
   }
+
+#contai{
+   padding-left: 150px;
+}
