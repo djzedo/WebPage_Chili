@@ -130,6 +130,21 @@ input, select {
 
 }
 
+#btnin{
+    background-color: #E10707;
+    font-family: "verdana";
+    color: white;
+    border: none;
+    margin-top: 20px;
+    margin-right: 60px;
+    font-size: 20px;
+    overflow: hidden;
+    top: 0px;
+    right: 0px;
+    position: absolute;
+
+}
+
 #btnac{
     background-color: #E10707;
     font-family: "verdana" !important;
@@ -178,7 +193,7 @@ input, select {
 
 .para{
     font-family: "verdana" !important;
-    padding-left: 60px;
+
     
 }
 

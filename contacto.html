@@ -63,10 +63,14 @@
       
     <div id="titulo">  
         <a href="index.html"><img src="img/logomenutransparente.png"/></a>
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="btn">Ingresar</button>
+        
+        <!--Boton de login-->
+        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="btnin">Ingresar</button>
+        <!--/Boton de login-->
+        
+        <!--Ventana Emergente Login-->
         <div id="myModal" class="modal fade" role="dialog">
           <div class="modal-dialog">
-
           <!-- Modal content-->
             <div class="modal-content">
               <div class="modal-header">
@@ -90,107 +94,140 @@
            </div>
 
          </div>
-       </div>
-        
+       </div>        
     </div>    
-      <?php echo $result; ?> 
+    <!--/Ventana Emergente Login--> 
+     
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
       
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      
     
-         
-      
+    <!--Menu Principal-->  
+    <!--Menu Software--> 
     <div id="TopMenu" class="container">
-      <div class="row" >
+      <div class="row">
         <div class="col-sm-3">
           <input type="button" id="btn" data-toggle="collapse" data-target="#Software" value="Software" >
-          <div id="Software" class="collapse out">
+            
+            <div id="Software" class="collapse out">
           <br>
           <br>
           <br>
-          <a href="pixelpoint.html" id="pixelp"><p class="para"> <strong> PAR<sup>®</sup>PixelPoint<sup>®</sup>POS </strong></p></a>
+                
+          <a href="pixelpoint.html" class="pixelp"><p>PAR<sup>®</sup>PixelPoint<sup>®</sup>POS</p></a>
+                
           <video autobuffer autoloop loop nocontrols autoplay width="120" height="100">
           <source src="PixelLogo.mp4" type="video/mp4">
-	         </video> <p align="justify" class="para">No importa si está operando un restaurante de servicio rápido, casual o restaurante de cena formal, PAR<sup>®</sup>PixelPoint<sup>®</sup> POS le ofrece características robustas en una solución fácil de implementar y fácil de usar.</p>
+	         </video> 
+          
+          <p align="justify" class="para">No importa si está operando un restaurante de servicio rápido, casual o restaurante de cena formal, PAR<sup>®</sup>PixelPoint<sup>®</sup> POS le ofrece características robustas en una solución fácil de implementar y fácil de usar.</p>
 
-           <hr>
+          <hr class="hr">
 
-          <p class="para"> <strong> PAR<sup>®</sup>PixelPoint<sup>®</sup>BackOffice<sup>®</sup> </strong></p>
+          <a href="backoffice.html" class="pixelp"><p>PAR<sup>®</sup>PixelPoint<sup>®</sup>BackOffice<sup>®</sup></p></a>
           <img src="img/POSBO.jpg" width="120" height="90">
           <br>
           <br>
+                
           <p align="justify" class="para">Diseñado para directores de empresas, de campo y de sitio, Operaciones de Información proporciona visibilidad en todas las tiendas y es una herramienta de toma de decisiones indispensables. Acceso a un panel ejecutivo, se obtiene una visibilidad clara de finanzas, análisis de ventas, marketing, inventario, y la fuerza laboral.</p>
-        </div>
-
+            
+          <!--/Menu Software-->    
+          </div>
     </div>
-        <div class="col-sm-3">
-          <input type="button" id="btn" data-toggle="collapse" data-target="#Hardware" value="Hardware">
-          <div id="Hardware" class="collapse out">
+          
+          <!--Menu Hardware-->
+          <div class="col-sm-3">
+            <input type="button" id="btn" data-toggle="collapse" data-target="#Hardware" value="Hardware">
+                <div id="Hardware" class="collapse out">
           <br>
           <br>
           <br>
-          <p class="para"> <strong> EverServ<sup>®</sup>7700</strong></p>
+                    
+          <a href="everserv77.html" class="pixelp"><p>EverServ<sup>®</sup>7700</p></a>
           <img src="img/7700.png" width="120" height="90">
           <br>
           <br>
+                    
           <p align="justify" class="para">El diseño renovado del EverServ<sup>®</sup>7700 familia del hardware de punto de venta, se construye con la misma durabilidad con la que PAR<sup>®</sup> es conocida; para su negocio es una decisión importante que afecta el nivel de servicio y rendimiento que ofrecen a sus clientes pero en un diseño innovador y elegante.</p>
 
-          <hr>
+          <hr class="hr">
 
-          <p class="para"> <strong> EverServ<sup>®</sup>7200</strong></p>
+          <a href="everserv72.html" class="pixelp"><p>EverServ<sup>®</sup>7200</p></a>
           <img src="img/7200.png" width="120" height="90">
           <br>
           <br>
+                    
           <p align="justify" class="para">La EverServ<sup>®</sup>7200 está hecha para funcionar en ambientes ásperos que involucran trato rudo y derrame de líquidos. El contemporáneo y elegante diseño de la 7200 la convierte en la mejor opción para operadores conscientes de la importancia de la imagen. La arquitectura de siguiente generación de alto rendimiento de la 7200, soporta aplicaciones demandantes y ofrece la velocidad que usted necesita para mejorar la atención a sus clientes.</p>
 
-           <hr>
+          <hr class="hr">
 
-          <p class="para"> <strong> EverServ<sup>®</sup>500</strong></p>
+          <a href="everserv500.html" class="pixelp"><p>EverServ<sup>®</sup>500</p></a>
           <img src="img/500.png" width="120" height="90">
           <br>
           <br>
-          <p align="justify" class="para">El diseño ofrece una resistente carcasa de alto impacto que se construye para soportar duras condiciones en restaurantes y locales comerciales con un funcionamiento continuo. El diseño de la EverServ<sup>®</sup>500 sin ventilador es silencioso, ofrece un bajo consumo de energía y minimiza el mantenimiento.
-          </p>
+                    
+          <p align="justify" class="para">El diseño ofrece una resistente carcasa de alto impacto que se construye para soportar duras condiciones en restaurantes y locales comerciales con un funcionamiento continuo. El diseño de la EverServ<sup>®</sup>500 sin ventilador es silencioso, ofrece un bajo consumo de energía y minimiza el mantenimiento.</p>
 
-          <hr>
+          <hr class="hr">
 
-          <p class="para"> <strong> PAR<sup>®</sup>Tablet 10"</strong></p>
+          <a href="tablet10.html" class="pixelp"><p> PAR<sup>®</sup>Tablet 10"</p></a>
           <img src="img/Tablet10.jpg" width="120" height="90">
           <br>
           <br>
-          <p align="justify" class="para">Ya sea que usted esté buscando ampliar su solución de punto de venta, mejorar la experiencia del cliente o mejorar la eficiencia de sus operaciones, la tablet 10 de PAR<sup>®</sup> es el ajuste ideal. La tablet es el equilibrio perfecto entre tamaño, fiabilidad y facilidad que se celebra en una mano.
-          </p>
-
-
+                    
+          <p align="justify" class="para">Ya sea que usted esté buscando ampliar su solución de punto de venta, mejorar la experiencia del cliente o mejorar la eficiencia de sus operaciones, la tablet 10 de PAR<sup>®</sup> es el ajuste ideal. La tablet es el equilibrio perfecto entre tamaño, fiabilidad y facilidad que se celebra en una mano.</p>
 
           </div>
-         
         </div>
+        <!--/Menu Hardware-->
+          
+        <!--Menu Servicios-->  
         <div class="col-sm-2">
           <input type="button" id="btn" data-toggle="collapse" data-target="#Servicios" value="Servicios">
           <div id="Servicios" class="collapse out">
           <br>
           <br>
           <br>
-          <img src="img/Services4.png">
+              
+          <img src="img/Services4.png" >
           <br>
           <br>
-          <p align="justify" class="para">Entrenamiento :
-          <br>
-          Confíe en el personal de Chili System el cual está certificado para brindar capacitación y entrenamiento en los módulos del software POS para que usted pueda aprovechar al máximo las ventajas y beneficios de PAR EverServ PixelPoint.</p></div>
+              <p class="pixelp">Entrenamiento:</p>
+              
+          <p align="justify" class="para">Confíe en el personal de Chili System, el cual está certificado para brindar capacitación e implementar los módulos del software POS para que usted pueda aprovechar al máximo las ventajas y beneficios de PAR<sup>®</sup>PixelPoint<sup>®</sup>POS.</p>
+            
+        <hr class="hr">
+              
+          <p class="pixelp">Modelo de Administración:</p>
+          
+          <p align="justify" class="para">Usted puede dejar la administración del Software PAR<sup>®</sup>PixelPoint<sup>®</sup>POS en manos expertas con el objetivo de no incurrir en gastos adicionales de personal e infraestructura, ya que Chili System provee integralmente este servicio.</p>
+              
+          <hr class="hr">         
+              
+          <p class="pixelp">Contratos:</p>
+          
+          <p align="justify" class="para">Tenga la tranquilidad de tener la operación de su negocio cubierto a través de los beneficios que contienen nuestros diferentes contratos para que el funcionamiento de su negocio no pare de crecer.</p></div>
+            
         </div>
-       
+        <!--/Menu Servicios--> 
+        <!--/Menu Compañía--> 
         <div class="col-sm-2">
-          <a href="compania.html"><input type="button" id="btn" value="Compañia"></a>
+          <a href="compania.html"><input type="button" id="btn" value="Compañía"></a>
         </div>
+         <!--/Menu Compañia-->
+         <!--Menu Contacto--> 
         <div class="col-sm-2">
           <a href="contacto.html"><input type="button" id="btn" value="Contacto"></a>
         </div>
+        <!--Menu Contacto--> 
+          
       </div>
+        
     </div>
+    <!--/Menu Principal-->
+      
   </head>
 
   <body>
@@ -198,5 +235,7 @@
       <video id="video-background" width="1200" height="700" autobuffer autoplay muted loop>
           <source src="par2c.mp4" type="video/mp4">
       </video>
+      
   </body>
+    
 </html>	
