@@ -1,7 +1,7 @@
-/* 
+/*
 html5doctor.com Reset Stylesheet v1.6.1
 Last Updated: 2010-09-17
-Author: Richard Clark - http://richclarkdesign.com 
+Author: Richard Clark - http://richclarkdesign.com
 */
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -12,7 +12,7 @@ b, i,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figcaption, figure, 
+article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
     margin:0;
@@ -27,7 +27,7 @@ body {
     line-height:1;
 }
 article,aside,details,figcaption,figure,
-footer,header,hgroup,menu,nav,section { 
+footer,header,hgroup,menu,nav,section {
     display:block;
 }
 nav ul {
@@ -57,7 +57,7 @@ ins {
 /* change colours to suit your needs */
 mark {
     background-color:#ff9;
-    color:#000; 
+    color:#000;
     font-style:italic;
     font-weight:bold;
 }
@@ -76,7 +76,7 @@ table {
 hr {
     display:block;
     height:1px;
-    border:0;   
+    border:0;
     border-top:1px solid #cccccc;
     margin:1em 0;
     padding:0;
@@ -114,7 +114,7 @@ input, select {
     width: 100%;
     background-color: #E10707;
     font-family: "verdana";
-  
+
 }
 
 #btn{
@@ -151,7 +151,6 @@ input, select {
     color: white;
     border: none;
     margin-top: 20px;
-    margin-left: 40px;
     margin-right: 60px;
     font-size: 20px;
     overflow: hidden;
@@ -165,8 +164,8 @@ input, select {
     border: none;
     overflow: hidden;
     font-weight: bold;
-    
-    
+
+
 }
 
 #fondointermedio{
@@ -176,7 +175,7 @@ input, select {
 }
 
 #video-background{
-    
+
     bottom: 0px;
     right: 0px;
     left: 0px;
@@ -194,12 +193,12 @@ input, select {
 .para{
     font-family: "verdana" !important;
 
-    
+
 }
 
 .para2{
-    font-family: "Arial";
-    float: left;
+    font-family: "verdana" !important;
+
 }
 
 #ing{
@@ -218,15 +217,23 @@ a:hover{
 }
 
 #bod{
-    
-    
+
+
 
 }
 
 #abo{
-    max-width:100%;
+
     position: relative;
     float: right;
+    background-color: white;
+}
+
+#abou{
+  max-width: 100%;
+  position: relative;
+  float: right;
+  background-color: white;
 }
 
 #copa{
@@ -260,5 +267,28 @@ a:hover{
 
 #contai{
    padding-left: 150px;
-   
+
+}
+
+.container{
+  background-color: white;
+}
+
+#container {
+
+}
+#image {
+  max-width: 100%;
+
+}
+#text {
+  z-index: 100;
+  position: absolute;
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  left: 150px;
+  top: 630px;
+  padding-right: 50px;
+  font-family: "verdana" !important;
 }

@@ -3,125 +3,49 @@
 <html lang="es" id="fondo">
 
 <meta charset="UTF-8">
-    
+
 <link rel="stylesheet" type="text/css" href="css/index.css">
-<?php
-      $user=$_POST['user']; 
-      $pass=$_POST['pass'];
-      $user = stripcslashes($user);
-      $pass = stripcslashes($pass);
-      $user = mysql_real_escape_string($user);
-      $pass = mysql_real_escape_string($pass);
 
-      //connect server y DB
-      mysql_connect("mysql.hostinger.es","u944924796_wp","trevize1");
-      mysql_select_db("u944924796_chili");
-      
-      $result = mysql_query("SELECT * FROM users_tbl WHERE user = '$user' and pass = '$pass'") 
-                or die("failed to query database". mysql_error());
-      $row = mysql_fetch_array($result);
-      if($row['user'] == $user && $row['pass'] == $pass){
-          header("location: portal.html");
-          echo "login success, welcome " .$row['user'];
-      }esle{
-          echo "failed to login";
-      }
-
-      /*$con = mysqli_connect("mysql.hostinger.es", "u944924796_wp", "trevize1", "u944924796_chili");
-  $user=$_POST['user']; 
-  $pass=$_POST['pass'];
-  $statement = mysqli_prepare($con,"SELECT * FROM users_tbl WHERE user = ? and pass = ?");
-  mysqli_stmt_blind_param($statemente, "ss", $user, $pass);
-  mysqli_stmt_execute($statement);
-  
-  mysqli_stmt_store_result($statement);
-  mysqli_stmt_blind_result($statement, $user, $pass);
-
-  $usera = array[];
-  
-  while(mysqli_stmt_fetch($statemente)){
-      $usera[user] = $user;
-      $usera[pass] = $pass;
-  }
-  if($usera[0] == $user && $usera[1] == $pass){
-      header("location: portal.html");
-  }else{
-      header("location: portal.html");
-  }
-
-  //echo json_encode($user); // id="video-background" width="1200" height="700"
-
-  mysqli_stmt_close($statemente);
-
-  mysqli_close($con);*/
-
-?>
 
   <head>
     <title>Chili System Consultants</title>
-    
-      
-    <div id="titulo">  
-        <a href="index.html"><img src="img/logomenutransparente.png"/></a>
-        
-        <!--Boton de login-->
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" id="btnin">Ingresar</button>
-        <!--/Boton de login-->
-        
-        <!--Ventana Emergente Login-->
-        <div id="myModal" class="modal fade" role="dialog">
-          <div class="modal-dialog">
-          <!-- Modal content-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Ingresar</h4>
-              </div>
-             <div class="modal-body">
-               <form method="POST" action="">
-                 <div class="row" id="ing">
-                 <label for="user" class="ui-hidden-accessible">Usuario:</label>
-                 <input type="text" name="user" id="user" placeholder="Usuario" required>
-                 </div>
-                 <div class="row" id="ing">
-                 <label for="pass" class="ui-hidden-accessible">Contraseña:</label>
-                 <input type="password" name="pass" id="pass" placeholder="Contraseña" required>
-                 </div>
-                 <input type="submit" class="btn btn-default" data-inline="true" id="btn" value="Ingresar">
-                 <button type="button" class="btn btn-default" id="btn" data-dismiss="modal" style="padding-rigth: 50px">Cerrar</button>
-               </form>
-             </div>
-           </div>
 
-         </div>
-       </div>        
-    </div>    
-    <!--/Ventana Emergente Login--> 
-     
+
+    <div id="titulo">
+        <a href="index.html"><img src="img/logomenutransparente.png"/></a>
+
+        <!--Boton de login-->
+        <a href="https://chilisystemconsultants.od1.vtiger.com/portal/index.php?module=Portal&view=Login"><button type="button" class="btn btn-info btn-lg" onclick="redireccionar()" id="btnin">Ingresar</button></a>
+        <!--/Boton de login-->
+
+
+    </div>
+    <!--/Ventana Emergente Login-->
+
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-      
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      
+
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
-    <!--Menu Principal-->  
-      <!--Menu Software--> 
+
+    <!--Menu Principal-->
+      <!--Menu Software-->
     <div id="TopMenu" class="container">
       <div class="row">
         <div class="col-sm-3">
           <input type="button" id="btn" data-toggle="collapse" data-target="#Software" value="Software" >
-            
+
             <div id="Software" class="collapse out">
           <br>
           <br>
           <br>
-                
+
           <a href="pixelpoint.html" class="pixelp"><p>PAR<sup>®</sup>PixelPoint<sup>®</sup>POS</p></a>
-                
+
           <video autobuffer autoloop loop nocontrols autoplay width="120" height="100">
           <source src="PixelLogo.mp4" type="video/mp4">
-	         </video> 
-          
+	         </video>
+
           <p align="justify" class="para">No importa si está operando un restaurante de servicio rápido, casual o restaurante de cena formal, PAR<sup>®</sup>PixelPoint<sup>®</sup> POS le ofrece características robustas en una solución fácil de implementar y fácil de usar.</p>
 
           <hr class="hr">
@@ -130,13 +54,13 @@
           <img src="img/POSBO.jpg" width="120" height="90">
           <br>
           <br>
-                
+
           <p align="justify" class="para">Diseñado para directores de empresas, de campo y de sitio, Operaciones de Información proporciona visibilidad en todas las tiendas y es una herramienta de toma de decisiones indispensables. Acceso a un panel ejecutivo, se obtiene una visibilidad clara de finanzas, análisis de ventas, marketing, inventario, y la fuerza laboral.</p>
-            
-          <!--/Menu Software-->    
+
+          <!--/Menu Software-->
           </div>
     </div>
-          
+
           <!--Menu Hardware-->
           <div class="col-sm-3">
             <input type="button" id="btn" data-toggle="collapse" data-target="#Hardware" value="Hardware">
@@ -144,12 +68,12 @@
           <br>
           <br>
           <br>
-                    
+
           <a href="everserv77.html" class="pixelp"><p>EverServ<sup>®</sup>7700</p></a>
           <img src="img/7700.png" width="120" height="90">
           <br>
           <br>
-                    
+
           <p align="justify" class="para">El diseño renovado del EverServ<sup>®</sup>7700 familia del hardware de punto de venta, se construye con la misma durabilidad con la que PAR<sup>®</sup> es conocida; para su negocio es una decisión importante que afecta el nivel de servicio y rendimiento que ofrecen a sus clientes pero en un diseño innovador y elegante.</p>
 
           <hr class="hr">
@@ -158,7 +82,7 @@
           <img src="img/7200.png" width="120" height="90">
           <br>
           <br>
-                    
+
           <p align="justify" class="para">La EverServ<sup>®</sup>7200 está hecha para funcionar en ambientes ásperos que involucran trato rudo y derrame de líquidos. El contemporáneo y elegante diseño de la 7200 la convierte en la mejor opción para operadores conscientes de la importancia de la imagen. La arquitectura de siguiente generación de alto rendimiento de la 7200, soporta aplicaciones demandantes y ofrece la velocidad que usted necesita para mejorar la atención a sus clientes.</p>
 
           <hr class="hr">
@@ -167,7 +91,7 @@
           <img src="img/500.png" width="120" height="90">
           <br>
           <br>
-                    
+
           <p align="justify" class="para">El diseño ofrece una resistente carcasa de alto impacto que se construye para soportar duras condiciones en restaurantes y locales comerciales con un funcionamiento continuo. El diseño de la EverServ<sup>®</sup>500 sin ventilador es silencioso, ofrece un bajo consumo de energía y minimiza el mantenimiento.</p>
 
           <hr class="hr">
@@ -176,89 +100,89 @@
           <img src="img/Tablet10.jpg" width="120" height="90">
           <br>
           <br>
-                    
+
           <p align="justify" class="para">Ya sea que usted esté buscando ampliar su solución de punto de venta, mejorar la experiencia del cliente o mejorar la eficiencia de sus operaciones, la tablet 10 de PAR<sup>®</sup> es el ajuste ideal. La tablet es el equilibrio perfecto entre tamaño, fiabilidad y facilidad que se celebra en una mano.</p>
 
           </div>
         </div>
         <!--/Menu Hardware-->
-          
-        <!--Menu Servicios-->  
+
+        <!--Menu Servicios-->
         <div class="col-sm-2">
           <input type="button" id="btn" data-toggle="collapse" data-target="#Servicios" value="Servicios">
           <div id="Servicios" class="collapse out">
           <br>
           <br>
           <br>
-              
+
           <img src="img/Services4.png" >
           <br>
           <br>
               <p class="pixelp">Entrenamiento:</p>
-              
+
           <p align="justify" class="para">Confíe en el personal de Chili System, el cual está certificado para brindar capacitación e implementar los módulos del software POS para que usted pueda aprovechar al máximo las ventajas y beneficios de PAR<sup>®</sup>PixelPoint<sup>®</sup>POS.</p>
-            
+
         <hr class="hr">
-              
+
           <p class="pixelp">Modelo de Administración:</p>
-          
+
           <p align="justify" class="para">Usted puede dejar la administración del Software PAR<sup>®</sup>PixelPoint<sup>®</sup>POS en manos expertas con el objetivo de no incurrir en gastos adicionales de personal e infraestructura, ya que Chili System provee integralmente este servicio.</p>
-              
-          <hr class="hr">      
-              
+
+          <hr class="hr">
+
           <p class="pixelp">Contratos:</p>
-          
+
           <p align="justify" class="para">Tenga la tranquilidad de tener la operación de su negocio cubierto a través de los beneficios que contienen nuestros diferentes contratos para que el funcionamiento de su negocio no pare de crecer.</p></div>
-            
+
         </div>
-        <!--/Menu Servicios--> 
-        <!--Menu Compañia--> 
+        <!--/Menu Servicios-->
+        <!--Menu Compañia-->
         <div class="col-sm-2">
           <a href="compania.html"><input type="button" id="btn" value="Compañia"></a>
-        <!--/Menu Compañia-->     
+        <!--/Menu Compañia-->
         </div>
-          
-        <!--Menu Contacto-->   
+
+        <!--Menu Contacto-->
         <div class="col-sm-2">
           <a href="contacto.html"><input type="button" id="btn" value="Contacto"></a>
-        <!--/Menu Contacto--> 
+        <!--/Menu Contacto-->
         </div>
-          
+
       </div>
-        
+
     </div>
     <!--/Menu Principal-->
-      
+
   </head>
 
   <body>
       <div id="fondointermedio">
-      
+
       </div>
         <div id="bod">
           <div class="row">
                 <div class="col-sm-10">
                     <h4><p class="pixelp">PAR<sup>®</sup>PixelPoint<sup>®</sup>POS</p></h4>
                 <br>
-                    
+
                     <p align="justify" class="para">Mejore la velocidad de órdenes, servicio a <br> clientes y ventas con la solución PAR<sup>®</sup>PixelPoint<sup>®</sup>POS.</p>
                     <img src="img/parpixelpos.jpg">
                     <video id="abo" autobuffer autoplay loop nocontrols width="600px;">
           <source src="ParTech.mp4" type="video/mp4">
           </video>
                 <br>
-                    
-                    
-                    
+
+
+
                 </div>
-              
+
       <div class="col-sm-6">
           <br>
           <br>
           <br>
           <br>
           <br>
-          
+
       </div>
       </div>
       <br>
@@ -305,17 +229,9 @@
       <br>
       <br>
       <br>
-      <br>
-      <p id="copa">OFRECE
-      <img src="img/copas2.png" id="copas">
-      </p>
-      <br>
-      <br>
-      <br>
-      <br>
       <h1 style="text-align: center; font-weight: bold; font-size: 80px; color: black;">Flexible y Líder en la<br> Industria.</h1>
       <br>
-      <hr>
+      <hr class="hr">
       <br>
       <br>
       <div class="row" id="abo">
@@ -330,7 +246,6 @@
         <br>
         <br>
         <br>
-        <br>
         <p align="justify" class="para"><strong>Conduzca a través <br></strong>
         Apoya totalmente una o de dos ventanas a través de conducir ambientes.</p>
         </div>
@@ -338,41 +253,56 @@
         <p align="justify" class="para"><strong>Marca totalmente personalizable <br></strong>
         Plantilla de diseño de interfaz de usuario basada facilita la marca de su diseño de la pantalla con la combinación de colores, logotipos y preferencias. También puede modificar las etiquetas, botones y la colocación para que coincida con la terminología de su concepto.</p>
         <br>
-        <br>
-        <br>
+
         <p align="justify" class="para"><strong>Reservas <br></strong>
         Aceptan reservaciones a través de una estación de anfitriona y gestionar con una función de diseño de tabla incorporada.</p>
         </div>
       </div>
       <br>
-      <hr>
       <br>
       <br>
       <div class="row" id="abo">
+        <br>
+        <br>
         <div class="col-sm-3" style="text-align:center;">
+          <br>
+          <br>
         <img src="img/increase.jpg">
         </div>
         <div class="col-sm-3">
-        <p align="justify" class="para"><strong>Auto Combo up-sells <br></strong>
+        <br>
+        <br>
+        <p align="justify" class="para2"><strong>Auto Combo up-sells <br></strong>
         Como los elementos se ordenan, PixelPoint reconoce automáticamente combinaciones posibles y utiliza botones de pop-up de venta por sugerencia para asegurar que los empleados no se pierda la oportunidad de aumentar las ventas de un combo.</p>
         </div>
         <div class="col-sm-3">
-        <p align="justify" class="para"><strong>Interacciones digitales con el cliente <br></strong>
+        <br>
+        <br>
+        <p align="justify" class="para2"><strong>Interacciones digitales con el cliente <br></strong>
         PixelPoint soporta herramientas de venta y marketing digital que le permiten diseñar promociones atractivas aumentar las ventas y de ventas cruzadas incluyendo confirmaciones de pedidos, pantallas de cara al cliente y tableros de menú digitales.</p>
         </div>
       </div>
       <br>
-      <hr>
       <br>
       <br>
       <div class="row" id="abo">
         <div class="col-sm-3" style="text-align:center;">
+          <br>
+          <br>
+          <br>
+          <br>
         <img src="img/speed.jpg">
         </div>
+        <br>
+        <br>
         <div class="col-sm-3">
+        <br>
+        <br>
         <p align="justify" class="para"><strong>Sistema de vídeo cocina <br></strong>
         PixelPoint trabaja con múltiples proveedores de visualización de vídeo de la cocina para mejorar el proceso de preparación de los alimentos. pantallas de vídeo son fáciles de leer y seguimiento de los pedidos, eliminar los problemas potenciales causados por los atascos de impresora o de papel que caen fuera del soporte y proporcionar capacidades de información reforzados.</p>
         </div>
+        <br>
+        <br>
         <div class="col-sm-3">
         <p align="justify" class="para"><strong>Inteligentes de flujo de orden <br></strong>
         Inteligentes de flujo de orden y de pantalla intuitiva diseños de PixelPoint le permiten personalizar la interfaz de usuario para adaptarse a su proceso de pedidos de clientes lógica y la "pantalla a la vez" listas de características todas las preguntas y opciones de la pantalla a la vez para acelerar su proceso de orden y ventas.</p>
@@ -382,4 +312,4 @@
       <br>
       <br>
   </body>
-</html>	
+</html>

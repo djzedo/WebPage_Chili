@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 
 <html lang="es">
-  <h1>bienvenido</h1>
+  <h1>Bienvenido</h1>
 <?php
 
-  echo "hola";
+  echo "Este es tu pagina para crear casos";
 ?>
 </html>
