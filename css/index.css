@@ -254,6 +254,7 @@ a:hover{
 }
 
 #abou{
+    
   max-width: 100%;
   position: relative;
   float: right;
@@ -267,6 +268,7 @@ a:hover{
     font-weight: bold;
     color: black;
     max-width:100%;
+    
 }
 
 #copas{
@@ -301,14 +303,46 @@ a:hover{
 #container {
 
 }
+
+#container2 {
+  position: relative;
+    
+}
+
+#container3 {
+  position: relative;
+  width: 300px;
+  color: "green";
+    
+}
+
 #image {
-  max-width: 100%;
+   
+    max-width: 100% !important;
+
 
 }
+
+#cont {
+float: left;
+height: 90px;
+}
+
+.cont2 {
+float: right;
+height: 120px;
+width: 350px;
+margin-right: 100px;
+margin-top: 0px;
+background-color: black;
+opacity: 0.3;
+    padding: 10px;
+
+}
+
 #text {
   z-index: 100;
-  position: absolute;
-  color: black;
+  color: white;
   font-size: 24px;
   font-weight: bold;
   left: 150px;
@@ -317,6 +351,17 @@ a:hover{
   font-family: "verdana" !important;
 }
 
+#compania-text{
+     z-index: 100;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  left: 150px;
+  top: 630px;
+  padding-right: 50px;
+  font-family: "verdana" !important;
+    
+}
 
 .footer {
   
@@ -326,4 +371,5 @@ a:hover{
   padding: 1rem;
   background-color: #efefef;
   text-align: center;
+    
 }
