@@ -104,14 +104,14 @@ input, select {
     background-color: black;
     opacity: 0.2;
     padding: 10px;
-    
+
 }
 
 @keyframes move {
-	0% { 
+	0% {
 		background-position: 0 60%, 0 50%;
 	}
-	100% { 
+	100% {
 	  background-position: 0 60%, 100% 50%;
 	}
 }
@@ -124,7 +124,7 @@ input, select {
   background-size: 100%, 50% 100%;
   background-position: 0 60%, 0 100%;
   animation: move 5s linear infinite;
-  
+
   /* Extra Styles */
   height: 100px;
   /*box-shadow: inset 0 0 25px rgba(0,0,0,.5);*/
@@ -262,14 +262,17 @@ a:hover{
     position: relative;
     float: right;
     background-color: white;
+    font-family: "verdana" !important;
+    max-width: 100%;
 }
 
 #abou{
-    
+
   max-width: 100%;
   position: relative;
   float: right;
   background-color: white;
+  font-family: "verdana" !important;
 }
 
 #copa{
@@ -279,7 +282,7 @@ a:hover{
     font-weight: bold;
     color: black;
     max-width:100%;
-    
+
 }
 
 #copas{
@@ -289,11 +292,13 @@ a:hover{
 #back{
     padding-left: 150px;
     padding-right: 150px;
+    font-family: "verdana" !important;
 }
 
 #back2{
     padding-left: 200px;
     padding-right: 200px;
+    font-family: "verdana" !important;
 }
 
 .carousel-inner > .item > img,
@@ -304,6 +309,7 @@ a:hover{
 
 #contai{
    padding-left: 150px;
+   max-width: 100%;
 
 }
 
@@ -317,18 +323,18 @@ a:hover{
 
 #container2 {
   position: relative;
-    
+
 }
 
 #container3 {
   position: relative;
   width: 300px;
   color: "green";
-    
+
 }
 
 #image {
-   
+
     max-width: 100% !important;
 
 
@@ -371,16 +377,33 @@ opacity: 0.3;
   top: 630px;
   padding-right: 50px;
   font-family: "verdana" !important;
-    
+
 }
 
 .footer {
-  
+
   right: 0;
   bottom: 0;
   left: 0;
   padding: 1rem;
   background-color: #efefef;
   text-align: center;
-    
+
+}
+
+#texto{
+  font-family: "verdana" !important;
+}
+
+#textocont{
+  font-family: "verdana" !important;
+  font-weight: bold;
+  font-size: 41px;
+  text-align: center;
+}
+#textocon{
+  font-family: "verdana" !important;
+  font-weight: bold;
+  font-size: 32px;
+  text-align: center;
 }
