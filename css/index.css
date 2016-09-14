@@ -312,8 +312,8 @@ a:hover{
 
 #contai{
    margin-right: 60px;
-   max-width: 100%;
-    padding-left: 70px; 
+   width: 100%;
+   padding-left: 70px; 
 
 }
 
