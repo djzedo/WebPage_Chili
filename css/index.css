@@ -186,9 +186,7 @@ input, select {
     color: white;
     border: none;
     margin-top: 20px;
-    margin-right: 60px;
     font-size: 20px;
-    overflow: hidden;
     width: 100%;
 }
 
@@ -228,6 +226,11 @@ input, select {
 .para{
     font-family: "verdana" !important;
 
+
+}
+
+h4{
+    width: 100%;
 
 }
 
@@ -308,9 +311,15 @@ a:hover{
   }
 
 #contai{
-   padding-left: 150px;
+   margin-right: 60px;
    max-width: 100%;
+    padding-left: 70px; 
 
+}
+
+#center-ES{
+    padding-left: 30px;
+    width: 100% !important; 
 }
 
 .container{
