@@ -422,5 +422,10 @@ opacity: 0.3;
 }
 
 #f1{
-    font-weight: bold;
+  font-weight: bold;
 }
+
+#bgvid{
+  width: 100%;
+}
+
