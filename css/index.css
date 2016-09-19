@@ -141,7 +141,7 @@ input, select {
 }
 
 #fondo{
-    background-color: black;
+    
 }
 
 #TopMenu{
@@ -207,21 +207,6 @@ input, select {
     background-image: url(../img/barrita.png);
 }
 
-#video-background{
-
-    bottom: 0px;
-    right: 0px;
-    left: 0px;
-    top: 0px;
-    padding-top: 0px;
-    width: auto;
-    height: auto;
-    min-height: 100%;
-    min-width: 100%;
-    overflow: hidden;
-    pointer-events: none;
-    z-index: 3;
-}
 
 .para{
     font-family: "verdana" !important;
@@ -425,7 +410,37 @@ opacity: 0.3;
   font-weight: bold;
 }
 
-#bgvid{
-  width: 100%;
+#video-background{
+    position: relative;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    padding-top: 0px;
+    width: auto;
+    height: auto;
+    min-height: 100%;
+    min-width: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -1;
 }
 
+#message{
+  position: absolute;
+  max-width: 100%;
+  z-index: 100;
+  color: white;
+  letter-spacing: 0.2em;
+  box-shadow: 0 0 2em 0 rgba(0, 0, 0, 0.9);
+  padding-left: 50px;
+  background: rgba(0, 0, 0, 0.9);
+  text-align: left;
+  padding: 1em 2em;
+  left: 5em;
+  transform: translateY(-180%);
+  font-family: "verdana" !important;
+  opacity: 0.7;
+  font-weight: bold;
+  font-size: 25px;
+}
