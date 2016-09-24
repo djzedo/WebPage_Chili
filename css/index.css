@@ -264,6 +264,7 @@ a:hover{
   float: right;
   background-color: white;
   font-family: "verdana" !important;
+    
 }
 
 #copa{
@@ -333,7 +334,7 @@ a:hover{
 #image {
 
     max-width: 100% !important;
-
+    
 
 }
 
@@ -443,4 +444,8 @@ opacity: 0.3;
   opacity: 0.3;
   font-weight: bold;
   font-size: 25px;
+}
+
+#formm{
+    font-family: "verdana" !important;
 }

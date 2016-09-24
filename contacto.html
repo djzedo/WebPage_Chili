@@ -157,8 +157,55 @@
 
   <body>
       <div id="fondointermedio"></div>
-
-      <img src="img/contactenos3.png">
+      <div class="row">
+          <div class="col-sm-6" >
+      <img src="img/contactenos3.png" style="width: 980px;">
+          </div>
+          <div class="col-sm-6" style="max-width: 100%; text-align: center; align-items: center; padding: inherit">
+              <br>
+              <br>
+                                <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+                    <form id="__vtigerWebForm" name="Interesados" action="https://chilisystemconsultants.od1.vtiger.com/modules/Webforms/capture.php" method="post" accept-charset="utf-8" enctype="multipart/form-data" style="max-width: 100%"><input type="hidden" name="__vtrftk" value="sid:62eb8e5f73ec728661300afee8af11de4b92449b,1474650421">
+                        <input type="hidden" name="publicid" value="cbb0cb1879336884844cec28138ea9a4">
+                        <input type="hidden" name="urlencodeenable" value="1">
+                        <input type="hidden" name="name" value="Interesados">
+                    
+                        <div class="form-group">
+                        
+                        <label style="font-family: verdana; ">Nombre</label>
+                    
+                    <input type="text" name="firstname" data-label="" value="" required="" style="width: 429px; margin: auto; padding: inherit;" class="form-control" placeholder="Ingresa tu nombre">                  
+                    
+                    </div>
+                    <div class="form-group">
+                    <label style="font-family: verdana;">Apellido</label>                      <input type="text" name="lastname" data-label="" value="" required="" style="width: 429px; margin: auto;" class="form-control" placeholder="Ingresa tu nombre">
+                    </div>
+                    <div class="form-group">
+                    <label style="font-family: verdana;">Empresa</label>                      <input type="text" name="company" data-label="" value="" required="" style="width: 429px; margin: auto;" class="form-control" placeholder="Ingresa el nombre de tu empresa">                  
+                    </div>
+                    <div class="form-group">
+                    <label style="font-family: verdana;">Ciudad</label>                        <input type="text" name="cf_1704" data-label="" value="" required="" style="width: 429px; margin: auto;" class="form-control" placeholder="Ingresa tu ciudad">                  
+                    </div>
+                    <div class="form-group" >
+                    <label style="font-family: verdana;">Telefono</label>
+                   
+                    <input type="text" name="phone" data-label="" value="" required="" style="width: 429px;  margin: auto;" class="form-control" placeholder="Ingresa tu numero de telefono">   
+                    </div>    
+                    <div class="form-group" >                     
+                    <label style="font-family: verdana;">Correo electrónico</label>      
+                    <input type="email" name="email" data-label="" value="" required="" style="width: 429px;  margin: auto;" class="form-control" placeholder="Ingresa tu nombre">
+                    </div>
+                    <div class="form-group">
+                    <label style="font-family: verdana;">Mensaje</label>            
+                    <textarea name="description" required="" style="width: 429px; margin: auto; height: 80px;" class="form-control" placeholder="Ingresa tu mensaje"></textarea>
+                    </div>
+                    <input type="submit" value="Enviar" id="vtigerFormSubmitBtn" style="background-color: #E10707; border: none; width: 429px; color: white; font-size: 20px; font-family: verdana; border-radius: 5px;">
+                    </form>
+                    <br>
+                    <br>
+                <script  type="text/javascript">window.onload = function() { var N=navigator.appName, ua=navigator.userAgent, tem;var M=ua.match(/(opera|chrome|safari|firefox|msie)\/?\s*(\.?\d+(\.\d+)*)/i);if(M && (tem= ua.match(/version\/([\.\d]+)/i))!= null) M[2]= tem[1];M=M? [M[1], M[2]]: [N, navigator.appVersion, "-?"];var browserName = M[0];var form = document.getElementById("__vtigerWebForm"), inputs = form.elements; form.onsubmit = function() { var required = [], att, val; for (var i = 0; i < inputs.length; i++) { att = inputs[i].getAttribute("required"); val = inputs[i].value; type = inputs[i].type; if(type == "email") {if(val != "") {var elemLabel = inputs[i].getAttribute("label");var emailFilter = /^[_/a-zA-Z0-9]+([!"#$%&()*+,./:;<=>?\^_`{|}~-]?[a-zA-Z0-9/_/-])*@[a-zA-Z0-9]+([\_\-\.]?[a-zA-Z0-9]+)*\.([\-\_]?[a-zA-Z0-9])+(\.?[a-zA-Z0-9]+)?$/;var illegalChars= /[\(\)\<\>\,\;\:\"\[\]]/ ;if (!emailFilter.test(val)) {alert("For "+ elemLabel +" field please enter valid email address"); return false;} else if (val.match(illegalChars)) {alert(elemLabel +" field contains illegal characters");return false;}}}if (att != null) { if (val.replace(/^\s+|\s+$/g, "") == "") { required.push(inputs[i].getAttribute("label")); } } } if (required.length > 0) { alert("The following fields are required: " + required.join()); return false; } var numberTypeInputs = document.querySelectorAll("input[type=number]");for (var i = 0; i < numberTypeInputs.length; i++) { val = numberTypeInputs[i].value;var elemLabel = numberTypeInputs[i].getAttribute("label");var elemDataType = numberTypeInputs[i].getAttribute("datatype");if(val != "") {if(elemDataType == "double") {var numRegex = /^[+-]?\d+(\.\d+)?$/;}else{var numRegex = /^[+-]?\d+$/;}if (!numRegex.test(val)) {alert("For "+ elemLabel +" field please enter valid number"); return false;}}}var dateTypeInputs = document.querySelectorAll("input[type=date]");for (var i = 0; i < dateTypeInputs.length; i++) {dateVal = dateTypeInputs[i].value;var elemLabel = dateTypeInputs[i].getAttribute("label");if(dateVal != "") {var dateRegex = /^[1-9][0-9]{3}-(0[1-9]|1[0-2]|[1-9]{1})-(0[1-9]|[1-2][0-9]|3[0-1]|[1-9]{1})$/;if(!dateRegex.test(dateVal)) {alert("For "+ elemLabel +" field please enter valid date in required format"); return false;}}}var inputElems = document.getElementsByTagName("input");var totalFileSize = 0;for(var i = 0; i < inputElems.length; i++) {if(inputElems[i].type.toLowerCase() === "file") {var file = inputElems[i].files[0];if(typeof file !== "undefined") {var totalFileSize = totalFileSize + file.size;}}}if(totalFileSize > 52428800) {alert("Maximum allowed file size including all files is 50MB.");return false;}var inputElem = document.querySelectorAll("input[type=file]");var fileSize = 0;for(var i = 0; i < inputElem.length; i++) {if(inputElem[i].type.toLowerCase() ===  "file") {if(inputElem[i].hasAttribute("selectedTypeImage")) {var imageFile = inputElem[i].files[0];var fileSize = imageFile.size;}}if(fileSize > 5242880) {alert("Maximum allowed image size is 5MB.");return false;}}}; }</script>
+          </div>
+      </div>
       <p align="justify" id="textocont">CONTÁCTENOS</p>
       <p align="justify" id="textocon">01.8000.423.606</p>
       <p align="justify" id="textocon">+57.4.4442510</p>
