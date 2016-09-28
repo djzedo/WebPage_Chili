@@ -444,3 +444,28 @@ opacity: 0.3;
   font-weight: bold;
   font-size: 25px;
 }
+
+.form-group{
+    font-family: "verdana" !important;
+
+    display: inline-block;
+
+}
+
+.center-group{
+    text-align: center;
+}
+
+.btncon{
+    background-color: #E10707;
+    color: white;
+    border: none;
+    text-align:center;
+    align-self: center;
+    min-width: 442px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: "verdana" !important;
+    
+    
+}
