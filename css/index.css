@@ -264,6 +264,7 @@ a:hover{
   float: right;
   background-color: white;
   font-family: "verdana" !important;
+    
 }
 
 #copa{
@@ -333,7 +334,7 @@ a:hover{
 #image {
 
     max-width: 100% !important;
-
+    
 
 }
 
@@ -445,6 +446,7 @@ opacity: 0.3;
   font-size: 25px;
 }
 
+<<<<<<< HEAD
 .form-group{
     font-family: "verdana" !important;
 
@@ -469,3 +471,8 @@ opacity: 0.3;
     
     
 }
+=======
+#formm{
+    font-family: "verdana" !important;
+}
+>>>>>>> origin/master
