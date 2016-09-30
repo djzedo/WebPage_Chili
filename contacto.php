@@ -200,20 +200,24 @@ if ($_POST){
           <input type="hidden" name="name" value="Interesados">
           <table>
           <tbody>
-          <div class="form-group center-block">
-          <label>Nombre</label>                     
+          <div class="form-group center-block" style="font-family: verdana; text-align: center; align-content: center; display: inline-block; padding-left: 110px;">
+          <label>Nombre</label>
+          <br>
           <input type="text" name="firstname" data-label="" value="" required="" style="width: 442px;" placeholder="Escribe tu nombre">                                    
           </div>
-          <div class="form-group center-block">
+          <div class="form-group center-block" style="font-family: verdana; text-align: center; align-content: center; display: inline-block; padding-left: 110px;">
           <label>Apellido</label>
+          <br>
           <input type="text" name="lastname" data-label="" value="" required="" style="width: 442px;" placeholder="Escribe tu apellido">
           </div>
-          <div class="form-group center-block">
+          <div class="form-group center-block" style="font-family: verdana; text-align: center; align-content: center; display: inline-block; padding-left: 110px;">
           <label>Correo electrónico</label>
+          <br>
           <input type="email" name="email" data-label="" value="" required="" style="width: 442px;" placeholder="Escribe tu correo electrónico">
           </div>
-          <div class="form-group center-block">
+          <div class="form-group center-block" style="font-family: verdana; text-align: center; align-content: center; display: inline-block; padding-left: 110px;">
           <label>Telefono</label>
+          <br>
           <input type="text" name="phone" data-label="" value="" required="" style="width: 442px;" placeholder="Escribe tu telefono">
           </div>
           <select name="leadsource" data-label="leadsource" required="" hidden="">
@@ -228,12 +232,13 @@ if ($_POST){
           <option value="Facebook">Facebook</option>
           <option value="Twitter">Twitter</option>
           </select>
-          <div class="form-group center-block">
+          <div class="form-group center-block" style="font-family: verdana; text-align: center; align-content: center; display: inline-block; padding-left: 110px;">
           <label>Mensaje</label>
+          <br>
           <textarea name="description" required="" style="width: 442px; height: 80px;" placeholder="Escribe tu mensaje"></textarea>
           </div>
           </tbody></table>
-          <div class="form-group center-block" style="text-align: center; align-content: center;">
+          <div class="form-group center-block" style="font-family: verdana; text-align: center; align-content: center; display: inline-block; padding-left: 110px;">
           <script src="https://www.google.com/recaptcha/api.js"></script><div class="g-recaptcha" data-sitekey="6LcmdSATAAAAAGWw734vGo0AXQwuxJS7RmDZA_Fe"></div>
           <input type="hidden" id="captchaUrl" value="https://chilisystemconsultants.od1.vtiger.com/modules/Settings/Webforms/actions/ValidateCaptcha.php">
           <input type="hidden" id="recaptcha_validation_value" name="recaptcha_validation_value">
