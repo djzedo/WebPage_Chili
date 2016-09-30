@@ -25,7 +25,16 @@ if ($_POST){
 
   <head>
     <title>Chili System Consultants</title>
+    
+      <style type=”text/css”>
+      .form-group{
+      font-family: "verdana" !important;
+      text-align: center;
+      align-content: center;
+      display: inline-block;
+      }          
 
+      </style>
 
     <div class="imagen-move">
         <div id="borde-arriba" ></div>
@@ -161,7 +170,7 @@ if ($_POST){
          <!--/Menu Compañia-->
          <!--Menu Contacto-->
         <div class="col-sm-2">
-          <a href="contacto.html"><input type="button" id="btn" value="Contacto"></a>
+          <a href="contacto.php"><input type="button" id="btn" value="Contacto"></a>
         </div>
         <!--Menu Contacto-->
 
@@ -188,45 +197,50 @@ if ($_POST){
           <input type="hidden" name="urlencodeenable" value="1">
           <input type="hidden" name="name" value="Interesados">
           <table>
-          <tbody><tr>
-          <td><label>First Name*</label></td>                     <td>
-                                                                                                                                                                                                                                <input type="text" name="firstname" data-label="" value="" required="">                                                                    </td></tr>
-                                                                                                                                                                                            <tr>
-                                <td><label>Last Name*</label></td>                                <td>
-                                                                                                                                                                                                                                <input type="text" name="lastname" data-label="" value="" required="">                                                                    </td></tr>
-                                                                                                                                                                                            <tr>
-                                <td><label>Primary Email*</label></td>                                <td>
-                                                                                                                                                                                                                                <input type="email" name="email" data-label="" value="" required="">                                                                    </td></tr>
-                                                                                                                                                                                            <tr>
-                                <td><label>Primary Phone*</label></td>                                <td>
-                                                                                                                                                                                                                                <input type="text" name="phone" data-label="" value="" required="">                                                                    </td></tr>
-                                                                                                                                                                                            <tr>
-                                                                <td>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <select name="leadsource" data-label="leadsource" required="" hidden="">
-                                            <option value="">Select Value</option>
-                                                                                            <option value="Acercamiento en Frío">Acercamiento en Frío</option>
-                                                                                            <option value="Cliente Existente">Cliente Existente</option>
-                                                                                            <option value="Empleado">Empleado</option>
-                                                                                            <option value="Feria">Feria</option>
-                                                                                            <option value="Sitio Web" selected="">Sitio Web</option>
-                                                                                            <option value="Referido">Referido</option>
-                                                                                            <option value="Otro">Otro</option>
-                                                                                            <option value="Facebook">Facebook</option>
-                                                                                            <option value="Twitter">Twitter</option>
-                                                                                    </select>
-
-                                                                    </td></tr>
-                                                                                                                                                                                            <tr>
-                                <td><label>Description*</label></td>                                <td>
-                                                                                                                    <textarea name="description" required=""></textarea>
-                                                                                                                                            </td></tr>
-                                                                                </tbody></table>
-                                                    <script src="https://www.google.com/recaptcha/api.js"></script><div class="g-recaptcha" data-sitekey="6LcmdSATAAAAAGWw734vGo0AXQwuxJS7RmDZA_Fe"></div>
-                            <input type="hidden" id="captchaUrl" value="https://chilisystemconsultants.od1.vtiger.com/modules/Settings/Webforms/actions/ValidateCaptcha.php">
-                            <input type="hidden" id="recaptcha_validation_value" name="recaptcha_validation_value">
-                                                <input type="submit" value="Submit" id="vtigerFormSubmitBtn">
-                    </form>
-                <script  type="text/javascript">window.onload = function() { var N=navigator.appName, ua=navigator.userAgent, tem;var M=ua.match(/(opera|chrome|safari|firefox|msie)\/?\s*(\.?\d+(\.\d+)*)/i);if(M && (tem= ua.match(/version\/([\.\d]+)/i))!= null) M[2]= tem[1];M=M? [M[1], M[2]]: [N, navigator.appVersion, "-?"];var browserName = M[0];var form = document.getElementById("__vtigerWebForm"), inputs = form.elements; form.onsubmit = function() { var required = [], att, val; for (var i = 0; i < inputs.length; i++) { att = inputs[i].getAttribute("required"); val = inputs[i].value; type = inputs[i].type; if(type == "email") {if(val != "") {var elemLabel = inputs[i].getAttribute("label");var emailFilter = /^[_/a-zA-Z0-9]+([!"#$%&()*+,./:;<=>?\^_`{|}~-]?[a-zA-Z0-9/_/-])*@[a-zA-Z0-9]+([\_\-\.]?[a-zA-Z0-9]+)*\.([\-\_]?[a-zA-Z0-9])+(\.?[a-zA-Z0-9]+)?$/;var illegalChars= /[\(\)\<\>\,\;\:\"\[\]]/ ;if (!emailFilter.test(val)) {alert("For "+ elemLabel +" field please enter valid email address"); return false;} else if (val.match(illegalChars)) {alert(elemLabel +" field contains illegal characters");return false;}}}if (att != null) { if (val.replace(/^\s+|\s+$/g, "") == "") { required.push(inputs[i].getAttribute("label")); } } } if (required.length > 0) { alert("The following fields are required: " + required.join()); return false; } var numberTypeInputs = document.querySelectorAll("input[type=number]");for (var i = 0; i < numberTypeInputs.length; i++) { val = numberTypeInputs[i].value;var elemLabel = numberTypeInputs[i].getAttribute("label");var elemDataType = numberTypeInputs[i].getAttribute("datatype");if(val != "") {if(elemDataType == "double") {var numRegex = /^[+-]?\d+(\.\d+)?$/;}else{var numRegex = /^[+-]?\d+$/;}if (!numRegex.test(val)) {alert("For "+ elemLabel +" field please enter valid number"); return false;}}}var dateTypeInputs = document.querySelectorAll("input[type=date]");for (var i = 0; i < dateTypeInputs.length; i++) {dateVal = dateTypeInputs[i].value;var elemLabel = dateTypeInputs[i].getAttribute("label");if(dateVal != "") {var dateRegex = /^[1-9][0-9]{3}-(0[1-9]|1[0-2]|[1-9]{1})-(0[1-9]|[1-2][0-9]|3[0-1]|[1-9]{1})$/;if(!dateRegex.test(dateVal)) {alert("For "+ elemLabel +" field please enter valid date in required format"); return false;}}}var inputElems = document.getElementsByTagName("input");var totalFileSize = 0;for(var i = 0; i < inputElems.length; i++) {if(inputElems[i].type.toLowerCase() === "file") {var file = inputElems[i].files[0];if(typeof file !== "undefined") {var totalFileSize = totalFileSize + file.size;}}}if(totalFileSize > 52428800) {alert("Maximum allowed file size including all files is 50MB.");return false;}var inputElem = document.querySelectorAll("input[type=file]");var fileSize = 0;for(var i = 0; i < inputElem.length; i++) {if(inputElem[i].type.toLowerCase() ===  "file") {if(inputElem[i].hasAttribute("selectedTypeImage")) {var imageFile = inputElem[i].files[0];var fileSize = imageFile.size;}}if(fileSize > 5242880) {alert("Maximum allowed image size is 5MB.");return false;}}document.getElementById("vtigerFormSubmitBtn").disabled = true;var recaptchaValidationValue = document.getElementById("recaptcha_validation_value").value;if(recaptchaValidationValue != true) {var recaptchaResponse = document.getElementsByName("g-recaptcha-response")[0].value;var validationUrl = document.getElementById("captchaUrl").value+"?recaptcha_response="+recaptchaResponse+"&current_url="+window.location.href+"&callback=captchaCallback";jsonp.fetch(validationUrl);return false;}};};var jsonp = {callbackCounter : 0,fetch : function(url) {url = url+"&callId="+this.callbackCounter;var scriptTag = document.createElement("SCRIPT");scriptTag.src = url;scriptTag.async = true;scriptTag.id = "captchaCallback_"+this.callbackCounter;scriptTag.type = "text/javascript";document.getElementsByTagName("HEAD")[0].appendChild(scriptTag);this.callbackCounter++;}};function captchaCallback(data) {if(data.result.success == true) {document.getElementById("recaptcha_validation_value").value = true;var form = document.getElementById("__vtigerWebForm");form.submit();} else {document.getElementById("vtigerFormSubmitBtn").disabled = false;grecaptcha.reset();alert("Captcha not verified. Please verify captcha.");}var element = document.getElementById("captchaCallback_"+data.result.callId);element.parentNode.removeChild(element);}</script>
+          <tbody>
+          <div class="form-group center-block">
+          <label>Nombre</label>                     
+          <input type="text" name="firstname" data-label="" value="" required="" style="width: 442px;" placeholder="Escribe tu nombre">                                    
+          </div>
+          <div class="form-group center-block">
+          <label>Apellido</label>
+          <input type="text" name="lastname" data-label="" value="" required="" style="width: 442px;" placeholder="Escribe tu apellido">
+          </div>
+          <div class="form-group center-block">
+          <label>Correo electrónico</label>
+          <input type="email" name="email" data-label="" value="" required="" style="width: 442px;" placeholder="Escribe tu correo electrónico">
+          </div>
+          <div class="form-group center-block">
+          <label>Telefono</label>
+          <input type="text" name="phone" data-label="" value="" required="" style="width: 442px;" placeholder="Escribe tu telefono">
+          </div>
+          <select name="leadsource" data-label="leadsource" required="" hidden="">
+          <option value="">Select Value</option>
+          <option value="Acercamiento en Frío">Acercamiento en Frío</option>
+          <option value="Cliente Existente">Cliente Existente</option>
+          <option value="Empleado">Empleado</option>
+          <option value="Feria">Feria</option>
+          <option value="Sitio Web" selected="">Sitio Web</option>
+          <option value="Referido">Referido</option>
+          <option value="Otro">Otro</option>
+          <option value="Facebook">Facebook</option>
+          <option value="Twitter">Twitter</option>
+          </select>
+          <div class="form-group center-block">
+          <label>Mensaje</label>
+          <textarea name="description" required="" style="width: 442px; height: 80px;" placeholder="Escribe tu mensaje"></textarea>
+          </div>
+          </tbody></table>
+          <div class="form-group center-block" style="text-align: center; align-content: center;">
+          <script src="https://www.google.com/recaptcha/api.js"></script><div class="g-recaptcha" data-sitekey="6LcmdSATAAAAAGWw734vGo0AXQwuxJS7RmDZA_Fe"></div>
+          <input type="hidden" id="captchaUrl" value="https://chilisystemconsultants.od1.vtiger.com/modules/Settings/Webforms/actions/ValidateCaptcha.php">
+          <input type="hidden" id="recaptcha_validation_value" name="recaptcha_validation_value">
+          </div>
+          <input type="submit" value="Enviar" id="vtigerFormSubmitBtn" class="btncon center-block">
+          </form>
+          
+          
+          <script  type="text/javascript">window.onload = function() { var N=navigator.appName, ua=navigator.userAgent, tem;var M=ua.match(/(opera|chrome|safari|firefox|msie)\/?\s*(\.?\d+(\.\d+)*)/i);if(M && (tem= ua.match(/version\/([\.\d]+)/i))!= null) M[2]= tem[1];M=M? [M[1], M[2]]: [N, navigator.appVersion, "-?"];var browserName = M[0];var form = document.getElementById("__vtigerWebForm"), inputs = form.elements; form.onsubmit = function() { var required = [], att, val; for (var i = 0; i < inputs.length; i++) { att = inputs[i].getAttribute("required"); val = inputs[i].value; type = inputs[i].type; if(type == "email") {if(val != "") {var elemLabel = inputs[i].getAttribute("label");var emailFilter = /^[_/a-zA-Z0-9]+([!"#$%&()*+,./:;<=>?\^_`{|}~-]?[a-zA-Z0-9/_/-])*@[a-zA-Z0-9]+([\_\-\.]?[a-zA-Z0-9]+)*\.([\-\_]?[a-zA-Z0-9])+(\.?[a-zA-Z0-9]+)?$/;var illegalChars= /[\(\)\<\>\,\;\:\"\[\]]/ ;if (!emailFilter.test(val)) {alert("For "+ elemLabel +" field please enter valid email address"); return false;} else if (val.match(illegalChars)) {alert(elemLabel +" field contains illegal characters");return false;}}}if (att != null) { if (val.replace(/^\s+|\s+$/g, "") == "") { required.push(inputs[i].getAttribute("label")); } } } if (required.length > 0) { alert("The following fields are required: " + required.join()); return false; } var numberTypeInputs = document.querySelectorAll("input[type=number]");for (var i = 0; i < numberTypeInputs.length; i++) { val = numberTypeInputs[i].value;var elemLabel = numberTypeInputs[i].getAttribute("label");var elemDataType = numberTypeInputs[i].getAttribute("datatype");if(val != "") {if(elemDataType == "double") {var numRegex = /^[+-]?\d+(\.\d+)?$/;}else{var numRegex = /^[+-]?\d+$/;}if (!numRegex.test(val)) {alert("For "+ elemLabel +" field please enter valid number"); return false;}}}var dateTypeInputs = document.querySelectorAll("input[type=date]");for (var i = 0; i < dateTypeInputs.length; i++) {dateVal = dateTypeInputs[i].value;var elemLabel = dateTypeInputs[i].getAttribute("label");if(dateVal != "") {var dateRegex = /^[1-9][0-9]{3}-(0[1-9]|1[0-2]|[1-9]{1})-(0[1-9]|[1-2][0-9]|3[0-1]|[1-9]{1})$/;if(!dateRegex.test(dateVal)) {alert("For "+ elemLabel +" field please enter valid date in required format"); return false;}}}var inputElems = document.getElementsByTagName("input");var totalFileSize = 0;for(var i = 0; i < inputElems.length; i++) {if(inputElems[i].type.toLowerCase() === "file") {var file = inputElems[i].files[0];if(typeof file !== "undefined") {var totalFileSize = totalFileSize + file.size;}}}if(totalFileSize > 52428800) {alert("Maximum allowed file size including all files is 50MB.");return false;}var inputElem = document.querySelectorAll("input[type=file]");var fileSize = 0;for(var i = 0; i < inputElem.length; i++) {if(inputElem[i].type.toLowerCase() ===  "file") {if(inputElem[i].hasAttribute("selectedTypeImage")) {var imageFile = inputElem[i].files[0];var fileSize = imageFile.size;}}if(fileSize > 5242880) {alert("Maximum allowed image size is 5MB.");return false;}}document.getElementById("vtigerFormSubmitBtn").disabled = true;var recaptchaValidationValue = document.getElementById("recaptcha_validation_value").value;if(recaptchaValidationValue != true) {var recaptchaResponse = document.getElementsByName("g-recaptcha-response")[0].value;var validationUrl = document.getElementById("captchaUrl").value+"?recaptcha_response="+recaptchaResponse+"&current_url="+window.location.href+"&callback=captchaCallback";jsonp.fetch(validationUrl);return false;}};};var jsonp = {callbackCounter : 0,fetch : function(url) {url = url+"&callId="+this.callbackCounter;var scriptTag = document.createElement("SCRIPT");scriptTag.src = url;scriptTag.async = true;scriptTag.id = "captchaCallback_"+this.callbackCounter;scriptTag.type = "text/javascript";document.getElementsByTagName("HEAD")[0].appendChild(scriptTag);this.callbackCounter++;}};function captchaCallback(data) {if(data.result.success == true) {document.getElementById("recaptcha_validation_value").value = true;var form = document.getElementById("__vtigerWebForm");form.submit();} else {document.getElementById("vtigerFormSubmitBtn").disabled = false;grecaptcha.reset();alert("Captcha not verified. Please verify captcha.");}var element = document.getElementById("captchaCallback_"+data.result.callId);element.parentNode.removeChild(element);}</script>
           
       <br>
       </div>  
