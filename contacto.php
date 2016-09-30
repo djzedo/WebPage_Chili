@@ -191,8 +191,8 @@ if ($_POST){
           <input type="hidden" name="name" value="Interesados">
           <table>
           <tbody>
-          <div class="form-group center-block" style="font-family: verdana; text-align: center; align-content: center; display: inline-block; padding-left: 110px;" id="label-form">
-          <label>Nombre:</label>
+          <div class="form-group center-block" style="font-family: verdana; text-align: center; align-content: center; display: inline-block; padding-left: 110px;" >
+          <label id="label-form">Nombre:</label>
          
           <input type="text" name="firstname" data-label="" value="" required="" style="width: 442px;" placeholder="Escribe tu nombre" id="NombreForm">                                    
           </div>
