@@ -1,4 +1,20 @@
+<?php
+
+
+if ($_POST){
+    
+        $emailTo = "pedro.salzedo@chili-system.com";
+        
+        $emailHeader = "from: ".$_POST["email"];
+        
+        $emailSubject = "Nuevo Interesado desde Pagina Web";
+        
+        $emailContent = $_POST["firstname"];
+}
+
+?>
 <!DOCTYPE html>
+
 
 <html lang="es" id="fondo">
 
