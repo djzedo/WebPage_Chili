@@ -241,9 +241,11 @@ if ($_POST){
           
             $("#NombreForm").click(function(){
                 $("#label-form").animate({
-                    $(this).css("color", "red");
                     
-                                    
+                    ,function(){
+                    $(this).css("background-color", "red");
+                    }
+                
             });
             
             });  
