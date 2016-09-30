@@ -10,6 +10,8 @@ if ($_POST){
         $emailSubject = "Nuevo Interesado desde Pagina Web";
         
         $emailContent = $_POST["firstname"];
+    
+        mail($emailTo,$emailSubject,$emailContent,$emailHeader);
 }
 
 ?>
