@@ -182,15 +182,14 @@ if ($_POST){
       <div class="col-sm-6 center-block">
           <br>
           <br>
-          
-                                                  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-                    <form id="__vtigerWebForm" name="Interesados" action="https://chilisystemconsultants.od1.vtiger.com/modules/Webforms/capture.php" method="post" accept-charset="utf-8" enctype="multipart/form-data"><input type="hidden" name="__vtrftk" value="sid:d35b86368c1a74b849e903fe8bb77e32a876eb8d,1475254379">
-                        <input type="hidden" name="publicid" value="cbb0cb1879336884844cec28138ea9a4">
-                        <input type="hidden" name="urlencodeenable" value="1">
-                        <input type="hidden" name="name" value="Interesados">
-                                                <table>
-                                                                                                                                                                                            <tbody><tr>
-                                <td><label>First Name*</label></td>                                <td>
+          <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+          <form id="__vtigerWebForm" name="Interesados" action="https://chilisystemconsultants.od1.vtiger.com/modules/Webforms/capture.php" method="post" accept-charset="utf-8" enctype="multipart/form-data"><input type="hidden" name="__vtrftk" value="sid:d35b86368c1a74b849e903fe8bb77e32a876eb8d,1475254379">
+          <input type="hidden" name="publicid" value="cbb0cb1879336884844cec28138ea9a4">
+          <input type="hidden" name="urlencodeenable" value="1">
+          <input type="hidden" name="name" value="Interesados">
+          <table>
+          <tbody><tr>
+          <td><label>First Name*</label></td>                     <td>
                                                                                                                                                                                                                                 <input type="text" name="firstname" data-label="" value="" required="">                                                                    </td></tr>
                                                                                                                                                                                             <tr>
                                 <td><label>Last Name*</label></td>                                <td>
