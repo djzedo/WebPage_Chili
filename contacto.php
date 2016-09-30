@@ -241,8 +241,8 @@ if ($_POST){
           
             $("#NombreForm").click(function(){
                 $("#label-form").animate({
-                    bottom:"300px",
-                    color:"red",
+                    bottom:"400px",
+                    backgroundColor:"red",
                                     
             });
             
