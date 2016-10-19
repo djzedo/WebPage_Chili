@@ -239,15 +239,15 @@ if ($_POST){
           
           <script  type="text/javascript">window.onload = function() { var N=navigator.appName, ua=navigator.userAgent, tem;var M=ua.match(/(opera|chrome|safari|firefox|msie)\/?\s*(\.?\d+(\.\d+)*)/i);if(M && (tem= ua.match(/version\/([\.\d]+)/i))!= null) M[2]= tem[1];M=M? [M[1], M[2]]: [N, navigator.appVersion, "-?"];var browserName = M[0];var form = document.getElementById("__vtigerWebForm"), inputs = form.elements; form.onsubmit = function() { var required = [], att, val; for (var i = 0; i < inputs.length; i++) { att = inputs[i].getAttribute("required"); val = inputs[i].value; type = inputs[i].type; if(type == "email") {if(val != "") {var elemLabel = inputs[i].getAttribute("label");var emailFilter = /^[_/a-zA-Z0-9]+([!"#$%&()*+,./:;<=>?\^_`{|}~-]?[a-zA-Z0-9/_/-])*@[a-zA-Z0-9]+([\_\-\.]?[a-zA-Z0-9]+)*\.([\-\_]?[a-zA-Z0-9])+(\.?[a-zA-Z0-9]+)?$/;var illegalChars= /[\(\)\<\>\,\;\:\"\[\]]/ ;if (!emailFilter.test(val)) {alert("For "+ elemLabel +" field please enter valid email address"); return false;} else if (val.match(illegalChars)) {alert(elemLabel +" field contains illegal characters");return false;}}}if (att != null) { if (val.replace(/^\s+|\s+$/g, "") == "") { required.push(inputs[i].getAttribute("label")); } } } if (required.length > 0) { alert("The following fields are required: " + required.join()); return false; } var numberTypeInputs = document.querySelectorAll("input[type=number]");for (var i = 0; i < numberTypeInputs.length; i++) { val = numberTypeInputs[i].value;var elemLabel = numberTypeInputs[i].getAttribute("label");var elemDataType = numberTypeInputs[i].getAttribute("datatype");if(val != "") {if(elemDataType == "double") {var numRegex = /^[+-]?\d+(\.\d+)?$/;}else{var numRegex = /^[+-]?\d+$/;}if (!numRegex.test(val)) {alert("For "+ elemLabel +" field please enter valid number"); return false;}}}var dateTypeInputs = document.querySelectorAll("input[type=date]");for (var i = 0; i < dateTypeInputs.length; i++) {dateVal = dateTypeInputs[i].value;var elemLabel = dateTypeInputs[i].getAttribute("label");if(dateVal != "") {var dateRegex = /^[1-9][0-9]{3}-(0[1-9]|1[0-2]|[1-9]{1})-(0[1-9]|[1-2][0-9]|3[0-1]|[1-9]{1})$/;if(!dateRegex.test(dateVal)) {alert("For "+ elemLabel +" field please enter valid date in required format"); return false;}}}var inputElems = document.getElementsByTagName("input");var totalFileSize = 0;for(var i = 0; i < inputElems.length; i++) {if(inputElems[i].type.toLowerCase() === "file") {var file = inputElems[i].files[0];if(typeof file !== "undefined") {var totalFileSize = totalFileSize + file.size;}}}if(totalFileSize > 52428800) {alert("Maximum allowed file size including all files is 50MB.");return false;}var inputElem = document.querySelectorAll("input[type=file]");var fileSize = 0;for(var i = 0; i < inputElem.length; i++) {if(inputElem[i].type.toLowerCase() ===  "file") {if(inputElem[i].hasAttribute("selectedTypeImage")) {var imageFile = inputElem[i].files[0];var fileSize = imageFile.size;}}if(fileSize > 5242880) {alert("Maximum allowed image size is 5MB.");return false;}}document.getElementById("vtigerFormSubmitBtn").disabled = true;var recaptchaValidationValue = document.getElementById("recaptcha_validation_value").value;if(recaptchaValidationValue != true) {var recaptchaResponse = document.getElementsByName("g-recaptcha-response")[0].value;var validationUrl = document.getElementById("captchaUrl").value+"?recaptcha_response="+recaptchaResponse+"&current_url="+window.location.href+"&callback=captchaCallback";jsonp.fetch(validationUrl);return false;}};};var jsonp = {callbackCounter : 0,fetch : function(url) {url = url+"&callId="+this.callbackCounter;var scriptTag = document.createElement("SCRIPT");scriptTag.src = url;scriptTag.async = true;scriptTag.id = "captchaCallback_"+this.callbackCounter;scriptTag.type = "text/javascript";document.getElementsByTagName("HEAD")[0].appendChild(scriptTag);this.callbackCounter++;}};function captchaCallback(data) {if(data.result.success == true) {document.getElementById("recaptcha_validation_value").value = true;var form = document.getElementById("__vtigerWebForm");form.submit();} else {document.getElementById("vtigerFormSubmitBtn").disabled = false;grecaptcha.reset();alert("Captcha not verified. Please verify captcha.");}var element = document.getElementById("captchaCallback_"+data.result.callId);element.parentNode.removeChild(element);}
           
-            $("#NombreForm").click(function(){
+            $("#NombreForm").on("click", function(){
                 $("#label-form").animate({
                     
-                }function(){
-                    $(this).css("background-color", "red");
+                    backgroundColor: "#cccccc",
+                    
+                },2000);
                 
                 });
     
-            });  
           </script>
           
       <br>
@@ -260,8 +260,112 @@ if ($_POST){
       
   </body>
     <footer class="footer">
+       <div class="row">
+         <div class="col-sm-12" style="height: 100px; max-width: 100%;">
+         <canvas id=c style="height: 100px; min-width: 100%;"></canvas>
+         </div>
+     </div> 
       <p id="f1">Chili System Consultants S.A.S</p>
      <p>Con su EMPRESA desde el inicio, en el<br> éxito y siempre</p>
+     
+    
+    <script>
+     var w = c.width = window.innerWidth,
+    h = c.height = window.innerHeight,
+    ctx = c.getContext( '2d' ),
 
+    tick = 0,
+
+    particles = [],
+
+    maxRadius = Math.sqrt( w*w/4 + h*h/4 );
+
+ctx.font = '12px monospace';
+
+function Particle(){
+  
+  this.reset();
+}
+Particle.prototype.reset = function(){
+  
+  this.radian = Math.random() * Math.PI * 2;
+  this.radius = 0;
+  this.angSpeed = .05;
+  this.incSpeed = 5;
+
+  this.x = this.y = 0;
+}
+Particle.prototype.step = function(){
+
+  var prevX = this.x,
+      prevY = this.y;
+
+  this.radian += this.angSpeed;
+  this.radius += this.incSpeed;
+
+  this.x = this.radius * Math.cos( this.radian );
+  this.y = this.radius * Math.sin( this.radian );
+
+  var dx = this.x - prevX,
+      dy = this.y - prevY,
+      len = Math.sqrt( dx*dx + dy*dy );
+
+  for( var i = 0; i <= len; i += 10 ){
+      
+    var y = prevY + dy * i / len,
+        x = prevX + dx * i / len;
+    
+    var posX = ( x / 10 |0 ) * 10,
+        posY = ( y / 10 |0 ) * 10;
+
+		ctx.fillStyle = 'rgb(2,2,2)';
+		ctx.fillRect( w/2 + posX, h / 2 + posY - 9, 10, 10 );
+    ctx.fillStyle = 'hsl(hue,80%,50%)'.replace( 'hue', posX / w * 240 + posY / h * 240 + tick );
+    ctx.fillText( Math.random() < .5 ? 0 : 1, w/2 + posX, h/2 + posY );
+  }
+
+  if( this.radius >= maxRadius )
+    this.reset();
+}
+
+function anim(){
+  
+  window.requestAnimationFrame( anim );
+
+  ++tick;
+
+  ctx.fillStyle = 'rgba(20,20,20,.04)';
+  ctx.fillRect( 0, 0, w, h );
+
+  if( particles.length < 100 && Math.random() < .3 )
+    particles.push( new Particle );
+
+  particles.map( function( particle ){ particle.step(); } );
+
+}
+ctx.fillStyle = '#000';
+ctx.fillRect( 0, 0, w, h );
+anim();
+
+window.addEventListener( 'resize', function(){
+  
+  w = c.width = window.innerWidth;
+  h = c.height = window.innerHeight;
+  ctx.font = '12px monospace';
+	
+	ctx.fillStyle = '#000';
+	ctx.fillRect( 0, 0, w, h );
+
+  maxRadius = Math.sqrt( w*w/4 + h*h/4 );
+
+})
+     </script>
+     <style>
+     canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+     </style>
     </footer>
 </html>
