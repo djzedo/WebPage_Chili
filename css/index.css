@@ -382,7 +382,7 @@ opacity: 0.3;
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 1rem;
+  padding: none;
   background-color: #efefef;
   text-align: center;
   font-family: "verdana" !important;
@@ -445,18 +445,16 @@ opacity: 0.3;
   font-size: 25px;
 }
 
-.form-group{
+/*.form-group{
     font-family: "verdana" !important;
     text-align: center;
     align-content: center;
     display: inline-block;
-    
-
 }
 
 .center-group{
     text-align: center;
-}
+}*/
 
 .btncon{
     background-color: #E10707;

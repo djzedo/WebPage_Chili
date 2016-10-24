@@ -176,6 +176,10 @@ if ($_POST){
 
   <body>
       <div id="fondointermedio"></div>
+      <div class="row">
+      <div class="col-sm-12" style="max-width: 100%;">
+      </div>
+      </div>
       <div class="row" style="min-width: 100%;">
       <div class="col-sm-6">
       <img src="img/contactenos3.png">
@@ -191,22 +195,22 @@ if ($_POST){
           <input type="hidden" name="name" value="Interesados">
           <table>
           <tbody>
-          <div class="form-group center-block" style="font-family: verdana; text-align: center; align-content: center; display: inline-block; padding-left: 110px;" >
-          <label id="label-form">Nombre:</label>
-         
+          <div class="form-group center-block" style="padding-left: 110px;">
+          <label>Nombre:</label>
+          <br>
           <input type="text" name="firstname" data-label="" value="" required="" style="width: 442px;" placeholder="Escribe tu nombre" id="NombreForm">                                    
           </div>
-          <div class="form-group center-block" style="font-family: verdana; text-align: center; align-content: center; display: inline-block; padding-left: 110px;">
+          <div class="form-group center-block" style="padding-left: 110px;">
           <label>Apellido:</label>
-       
+          <br>
           <input type="text" name="lastname" data-label="" value="" required="" style="width: 442px;" placeholder="Escribe tu apellido">
           </div>
-          <div class="form-group center-block" style="font-family: verdana; text-align: center; align-content: center; display: inline-block; padding-left: 110px;">
+          <div class="form-group center-block" style="padding-left: 110px;">
           <label>Correo electrónico:</label>
           <br>
           <input type="email" name="email" data-label="" value="" required="" style="width: 442px;" placeholder="Escribe tu correo electrónico">
           </div>
-          <div class="form-group center-block" style="font-family: verdana; text-align: center; align-content: center; display: inline-block; padding-left: 110px;">
+          <div class="form-group center-block" style="padding-left: 110px;">
           <label>Telefono:</label>
           <br>
           <input type="text" name="phone" data-label="" value="" required="" style="width: 442px;" placeholder="Escribe tu telefono">
@@ -223,8 +227,8 @@ if ($_POST){
           <option value="Facebook">Facebook</option>
           <option value="Twitter">Twitter</option>
           </select>
-          <div class="form-group center-block" style="font-family: verdana; text-align: center; align-content: center; display: inline-block; padding-left: 110px;">
-          <label>Mensaje</label>
+          <div class="form-group center-block" style="padding-left: 110px;">
+          <label>Mensaje:</label>
           <br>
           <textarea name="description" required="" style="width: 442px; height: 80px;" placeholder="Escribe tu mensaje"></textarea>
           </div>
