@@ -86,15 +86,7 @@ input, select {
 }
 
 /*Fin CSS Reset >>>>>>>>
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 */
-
 
 
 #borde-arriba{
@@ -115,7 +107,6 @@ input, select {
 	  background-position: 0 60%, 100% 50%;
 	}
 }
-
 
 
 .imagen-move {
@@ -377,7 +368,7 @@ opacity: 0.3;
 
 }
 
-.footer {
+footer {
 
   right: 0;
   bottom: 0;
@@ -386,7 +377,6 @@ opacity: 0.3;
   background-color: #efefef;
   text-align: center;
   font-family: "verdana" !important;
-
 }
 
 #texto{
@@ -399,6 +389,7 @@ opacity: 0.3;
   font-size: 41px;
   text-align: center;
 }
+
 #textocon{
   font-family: "verdana" !important;
   font-weight: bold;

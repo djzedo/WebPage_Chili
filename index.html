@@ -1,173 +1,176 @@
 <!DOCTYPE html>
+<html lang="es" id="fondo" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Página Principal de Chili System Colombia" />
+    <link rel="canonical" href="https://chili-system.com" />
+    <meta name="keywords" content="POS,Chili,Chili System,Punto de Venta,PDV,
+    pixelpoint,pixel point, par pixel point,software pos" />
+    <meta name="author" content="Chili System Consultants" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />   
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Chili System Consultants</title>         
 
-<html lang="es" id="fondo">
-
-<meta charset="UTF-8">
-
-<link rel="stylesheet" type="text/css" href="css/index.css">
-
-
-  <head>
-    <title>Chili System Consultants</title>
-
-      
-      
+    <!-- Sección Antes del Menu Principal -->
     <div class="imagen-move">
-        <div id="borde-arriba" ></div>
-        <a href="index.html"><img src="img/logomenutransparente.png"/></a>
+        <div id="borde-arriba"></div>
 
-        <!--Boton de login-->
+        <a href="index.html"><img src="img/logomenutransparente.png" alt="Chili System Logo" /></a>
+        <!--Boton de login-->        
         <a href="https://chilisystemconsultants.od1.vtiger.com/portal/index.php?module=Portal&view=Login"><button type="button" class="btn btn-info btn-lg" onclick="redireccionar()" id="btnin">Ingresar</button></a>
         <!--/Boton de login-->
-
-
     </div>
-      
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-    <!--Menu Principal-->
-    <!--Menu Software-->
+    <!--Sección Antes de Menu Principal -->
+</head>  
+    
+<nav>   
+<!-- Menu Principal -->
     <div id="TopMenu" class="container">
-      <div class="row">
-        <div class="col-sm-3">
-          <input type="button" id="btn" data-toggle="collapse" data-target="#Software" value="Software" >
+        <div class="row">
+        <!--Menu Software-->
+            <div class="col-sm-3">  
+                <input type="button" id="btn" data-toggle="collapse" data-target="#Software" value="Software" >
+                <div id="Software" class="collapse out">
+                    <br>
+                    <br>
+                    <br>
+                    
+                    <section>
+                        <a href="pixelpoint.html" class="pixelp"><h3>PAR<sup>®</sup>PixelPoint<sup>®</sup>POS</h3></a>
 
-            <div id="Software" class="collapse out">
-          <br>
-          <br>
-          <br>
+                        <video autobuffer autoloop loop nocontrols autoplay width="120" height="100">
+                        <source src="PixelLogo.mp4" type="video/mp4">
+                        </video>
 
-          <a href="pixelpoint.html" class="pixelp"><p>PAR<sup>®</sup>PixelPoint<sup>®</sup>POS</p></a>
+                        <p align="justify" class="para">No importa si está operando un restaurante de servicio rápido, casual o restaurante de cena formal, PAR<sup>®</sup>PixelPoint<sup>®</sup> POS le ofrece características robustas en una solución fácil de implementar y fácil de usar.</p>
 
-          <video autobuffer autoloop loop nocontrols autoplay width="120" height="100">
-          <source src="PixelLogo.mp4" type="video/mp4">
-	         </video>
+                        <hr class="hr">
 
-          <p align="justify" class="para">No importa si está operando un restaurante de servicio rápido, casual o restaurante de cena formal, PAR<sup>®</sup>PixelPoint<sup>®</sup> POS le ofrece características robustas en una solución fácil de implementar y fácil de usar.</p>
+                        <a href="backoffice.html" class="pixelp"><h3>PAR<sup>®</sup>PixelPoint<sup>®</sup><br>BackOffice<sup>®</sup></h3></a>
+                        <img src="img/POSBO.jpg" width="120" height="90" alt="BackOffice">
+                        <br>
+                        <br>
 
-          <hr class="hr">
+                        <p align="justify" class="para">Diseñado para directores de empresas, de campo y de sitio, Operaciones de Información proporciona visibilidad en todas las tiendas y es una herramienta de toma de decisiones indispensables. Acceso a un panel ejecutivo, se obtiene una visibilidad clara de finanzas, análisis de ventas, marketing, inventario, y la fuerza laboral.</p>
+                    </section>
+                </div>
+            </div>
+        <!--/Menu Software-->
 
-          <a href="backoffice.html" class="pixelp"><p>PAR<sup>®</sup>PixelPoint<sup>®</sup>BackOffice<sup>®</sup></p></a>
-          <img src="img/POSBO.jpg" width="120" height="90">
-          <br>
-          <br>
-
-          <p align="justify" class="para">Diseñado para directores de empresas, de campo y de sitio, Operaciones de Información proporciona visibilidad en todas las tiendas y es una herramienta de toma de decisiones indispensables. Acceso a un panel ejecutivo, se obtiene una visibilidad clara de finanzas, análisis de ventas, marketing, inventario, y la fuerza laboral.</p>
-
-          <!--/Menu Software-->
-          </div>
-    </div>
-
-          <!--Menu Hardware-->
-          <div class="col-sm-3">
-            <input type="button" id="btn" data-toggle="collapse" data-target="#Hardware" value="Hardware">
+        <!--Menu Hardware-->
+            <div class="col-sm-3">
+                <input type="button" id="btn" data-toggle="collapse" data-target="#Hardware" value="Hardware">
                 <div id="Hardware" class="collapse out">
-          <br>
-          <br>
-          <br>
+                    <br>
+                    <br>
+                    <br>
+                    <section>
+                        <a href="everserv77.html" class="pixelp"><h3>EverServ<sup>®</sup>7700</h3></a>
+                        <img src="img/7700.png" width="120" height="90" alt="EverServ 7700" />
+                        <br>
+                        <br>
 
-          <a href="everserv77.html" class="pixelp"><p>EverServ<sup>®</sup>7700</p></a>
-          <img src="img/7700.png" width="120" height="90">
-          <br>
-          <br>
+                        <p align="justify" class="para">El diseño renovado del EverServ<sup>®</sup>7700 familia del hardware de punto de venta, se construye con la misma durabilidad con la que PAR<sup>®</sup> es conocida; para su negocio es una decisión importante que afecta el nivel de servicio y rendimiento que ofrecen a sus clientes pero en un diseño innovador y elegante.</p>
 
-          <p align="justify" class="para">El diseño renovado del EverServ<sup>®</sup>7700 familia del hardware de punto de venta, se construye con la misma durabilidad con la que PAR<sup>®</sup> es conocida; para su negocio es una decisión importante que afecta el nivel de servicio y rendimiento que ofrecen a sus clientes pero en un diseño innovador y elegante.</p>
+                        <hr class="hr">
 
-          <hr class="hr">
+                        <a href="everserv72.html" class="pixelp"><h3>EverServ<sup>®</sup>7200</h3></a>
+                        <img src="img/7200.png" width="120" height="90" alt="EverServ 7200">
+                        <br>
+                        <br>
 
-          <a href="everserv72.html" class="pixelp"><p>EverServ<sup>®</sup>7200</p></a>
-          <img src="img/7200.png" width="120" height="90">
-          <br>
-          <br>
+                        <p align="justify" class="para">La EverServ<sup>®</sup>7200 está hecha para funcionar en ambientes ásperos que involucran trato rudo y derrame de líquidos. El contemporáneo y elegante diseño de la 7200 la convierte en la mejor opción para operadores conscientes de la importancia de la imagen. La arquitectura de siguiente generación de alto rendimiento de la 7200, soporta aplicaciones demandantes y ofrece la velocidad que usted necesita para mejorar la atención a sus clientes.</p>
 
-          <p align="justify" class="para">La EverServ<sup>®</sup>7200 está hecha para funcionar en ambientes ásperos que involucran trato rudo y derrame de líquidos. El contemporáneo y elegante diseño de la 7200 la convierte en la mejor opción para operadores conscientes de la importancia de la imagen. La arquitectura de siguiente generación de alto rendimiento de la 7200, soporta aplicaciones demandantes y ofrece la velocidad que usted necesita para mejorar la atención a sus clientes.</p>
+                        <hr class="hr">
 
-          <hr class="hr">
+                        <a href="everserv500.html" class="pixelp"><h3>EverServ<sup>®</sup>500</h3></a>
+                        <img src="img/500.png" width="120" height="90" alt="EverServ 500">
+                        <br>
+                        <br>
 
-          <a href="everserv500.html" class="pixelp"><p>EverServ<sup>®</sup>500</p></a>
-          <img src="img/500.png" width="120" height="90">
-          <br>
-          <br>
+                        <p align="justify" class="para">El diseño ofrece una resistente carcasa de alto impacto que se construye para soportar duras condiciones en restaurantes y locales comerciales con un funcionamiento continuo. El diseño de la EverServ<sup>®</sup>500 sin ventilador es silencioso, ofrece un bajo consumo de energía y minimiza el mantenimiento.</p>
 
-          <p align="justify" class="para">El diseño ofrece una resistente carcasa de alto impacto que se construye para soportar duras condiciones en restaurantes y locales comerciales con un funcionamiento continuo. El diseño de la EverServ<sup>®</sup>500 sin ventilador es silencioso, ofrece un bajo consumo de energía y minimiza el mantenimiento.</p>
+                        <hr class="hr">
 
-          <hr class="hr">
+                        <a href="tablet10.html" class="pixelp"><h3> PAR<sup>®</sup>Tablet 8"</h3></a>
+                        <img src="img/Tablet10.jpg" width="120" height="90" alt="Tablet 8&#148;">
+                        <br>
+                        <br>
 
-          <a href="tablet10.html" class="pixelp"><p> PAR<sup>®</sup>Tablet 8"</p></a>
-          <img src="img/Tablet10.jpg" width="120" height="90">
-          <br>
-          <br>
-
-          <p align="justify" class="para">Ya sea que usted esté buscando ampliar su solución de punto de venta, mejorar la experiencia del cliente o mejorar la eficiencia de sus operaciones, la tablet 10 de PAR<sup>®</sup> es el ajuste ideal. La tablet es el equilibrio perfecto entre tamaño, fiabilidad y facilidad que se celebra en una mano.</p>
-
-          </div>
-        </div>
+                        <p align="justify" class="para">Ya sea que usted esté buscando ampliar su solución de punto de venta, mejorar la experiencia del cliente o mejorar la eficiencia de sus operaciones, la tablet 10 de PAR<sup>®</sup> es el ajuste ideal. La tablet es el equilibrio perfecto entre tamaño, fiabilidad y facilidad que se celebra en una mano.</p>
+                    </section>        
+                </div>
+            </div>
         <!--/Menu Hardware-->
 
         <!--Menu Servicios-->
-        <div class="col-sm-2">
-          <input type="button" id="btn" data-toggle="collapse" data-target="#Servicios" value="Servicios">
-          <div id="Servicios" class="collapse out">
-          <br>
-          <br>
-          <br>
+            <div class="col-sm-2">
+                <input type="button" id="btn" data-toggle="collapse" data-target="#Servicios" value="Servicios">
+                <div id="Servicios" class="collapse out">
+                    <br>
+                    <br>
+                    <br>
+                    
+                    <img src="img/Services4.png" alt="Servicios">
+                    <br>
+                    <br>
+                    
+                    <section>
+                        <p class="pixelp">Entrenamiento:</p>
 
-          <img src="img/Services4.png" >
-          <br>
-          <br>
-          <p class="pixelp">Entrenamiento:</p>
+                        <p align="justify" class="para">Confíe en el personal de Chili System, el cual está certificado para brindar capacitación e implementación de los módulos del software POS para que usted pueda aprovechar al máximo las ventajas y beneficios de PAR<sup>®</sup>PixelPoint<sup>®</sup>POS.</p>
 
-          <p align="justify" class="para">Confíe en el personal de Chili System, el cual está certificado para brindar capacitación e implementar los módulos del software POS para que usted pueda aprovechar al máximo las ventajas y beneficios de PAR<sup>®</sup>PixelPoint<sup>®</sup>POS.</p>
+                        <hr class="hr">
 
-        <hr class="hr">
+                        <p class="pixelp">Modelo de Administración:</p>
 
-          <p class="pixelp">Modelo de Administración:</p>
+                        <p align="justify" class="para">Usted puede dejar la administración del Software PAR<sup>®</sup>PixelPoint<sup>®</sup>POS en manos expertas con el objetivo de no incurrir en gastos adicionales de personal e infraestructura, ya que Chili System provee integralmente este servicio.</p>
 
-          <p align="justify" class="para">Usted puede dejar la administración del Software PAR<sup>®</sup>PixelPoint<sup>®</sup>POS en manos expertas con el objetivo de no incurrir en gastos adicionales de personal e infraestructura, ya que Chili System provee integralmente este servicio.</p>
+                        <hr class="hr">
 
-          <hr class="hr">
+                        <p class="pixelp">Contratos:</p>
 
-          <p class="pixelp">Contratos:</p>
-
-          <p align="justify" class="para">Tenga la tranquilidad de tener la operación de su negocio cubierto a través de los beneficios que contienen nuestros diferentes contratos para que el funcionamiento de su negocio no pare de crecer.</p></div>
-
-        </div>
+                        <p align="justify" class="para">Tenga la tranquilidad de tener la operación de su negocio cubierto a través de los beneficios que contienen nuestros diferentes contratos para que el funcionamiento de su negocio no pare de crecer.</p>
+                    </section>
+                </div>        
+            </div>
         <!--/Menu Servicios-->
+            
         <!--/Menu Compañía-->
-        <div class="col-sm-2">
-          <a href="compania.html"><input type="button" id="btn" value="Compañía"></a>
-        </div>
+            <div class="col-sm-2">
+                <a href="compania.html"><input type="button" id="btn" value="Compañía"></a>
+            </div>
          <!--/Menu Compañia-->
+            
          <!--Menu Contacto-->
-        <div class="col-sm-2">
-          <a href="contacto.php"><input type="button" id="btn" value="Contacto"></a>
+            <div class="col-sm-2">
+                <a href="contacto.php"><input type="button" id="btn" value="Contacto"></a>
+            </div>
+        <!--/Menu Contacto-->
         </div>
-        <!--Menu Contacto-->
-
-      </div>
-
     </div>
-    <!--/Menu Principal-->
+<!--/Menu Principal-->
+</nav>
 
-  </head>
-
-  <body>
-      <div id="fondointermedio"></div>
-      <div class="row">
-      <div class="col-sm-12" style="min-width: 100%;">
-      <div id="container" id="video-background">
-      <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" style="width:100%;">
-  <source src="par2c.mp4" type="video/mp4">
-</video>
+<body>
+    <div id="fondointermedio"></div>
+    
+    <div class="row">
+        <div class="col-sm-12" style="min-width: 100%;">
+            <div id="container" id="video-background">
+                <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" style="width:100%;"> <source src="par2c.mp4" type="video/mp4">
+                </video>
           
-    <div id="message">Con PAR EverServ Hardware<br> usted podrá tener<br> confiabilidad y tranquilidad<br> para operar continuamente su<br> negocio.</div> 
-          </div>
-          </div>
+                <div id="message">Con PAR<sup>®</sup> EverServ<sup>®</sup> Software y Hardware <br> 
+                    usted obtiene confiabilidad y tranquilidad<br> para operar continuamente sus negocios.
+                </div> 
+            </div>
+        </div>
     </div>
+    
 <script type="text/javascript">
     var $vid = $('video','#container');
     var $msg = $('#message'); 
@@ -175,34 +178,30 @@
     top:$vid.offset().top + (($vid.height()/2) - ($msg.height()/2)),
     left:$vid.offset().left + (($vid.width()/2) - ($msg.width()/2))
     });
-      </script>      
+</script>      
       
-  </body>
+</body>
  
- <footer class="footer">
-     <div class="row">
-         <div class="col-sm-12" style="height: 100px;">
-         <canvas id=c style="height: 100px; min-width: 100%;"></canvas>
-         </div>
-     </div>
-      <p id="f1">Chili System Consultants S.A.S</p>
-     <p>Con su EMPRESA desde el inicio, en el<br> éxito y siempre</p>
-     
-     <script>
-     var w = c.width = window.innerWidth,
+<footer>
+    <div class="row">
+        <div class="col-sm-12" style="height: 100px;">
+            <canvas id=c style="height: 100px; min-width: 100%;"></canvas>
+        </div>
+    </div>
+    <p>Con su EMPRESA desde el inicio, en el<wbr> éxito y siempre.</p>
+    <p id="f1">&copy; 2017 Chili System Consultants S.A.S. <br>Todos los derechos reservados.</p>     
+</footer>
+
+<script>
+    var w = c.width = window.innerWidth,
     h = c.height = window.innerHeight,
     ctx = c.getContext( '2d' ),
-
     tick = 0,
-
     particles = [],
-
     maxRadius = Math.sqrt( w*w/4 + h*h/4 );
-
-ctx.font = '12px monospace';
+    ctx.font = '12px monospace';
 
 function Particle(){
-  
   this.reset();
 }
 Particle.prototype.reset = function(){
@@ -214,6 +213,7 @@ Particle.prototype.reset = function(){
 
   this.x = this.y = 0;
 }
+
 Particle.prototype.step = function(){
 
   var prevX = this.x,
@@ -239,8 +239,8 @@ Particle.prototype.step = function(){
 
 		ctx.fillStyle = 'rgb(2,2,2)';
 		ctx.fillRect( w/2 + posX, h / 2 + posY - 9, 10, 10 );
-    ctx.fillStyle = 'hsl(hue,80%,50%)'.replace( 'hue', posX / w * 240 + posY / h * 240 + tick );
-    ctx.fillText( Math.random() < .5 ? 0 : 1, w/2 + posX, h/2 + posY );
+        ctx.fillStyle = 'hsl(hue,80%,50%)'.replace( 'hue', posX / w * 240 + posY / h * 240 + tick );
+        ctx.fillText( Math.random() < .5 ? 0 : 1, w/2 + posX, h/2 + posY );
   }
 
   if( this.radius >= maxRadius )
@@ -259,9 +259,12 @@ function anim(){
   if( particles.length < 100 && Math.random() < .3 )
     particles.push( new Particle );
 
-  particles.map( function( particle ){ particle.step(); } );
+    particles.map( function( particle ){ 
+        particle.step(); 
+    });
 
 }
+    
 ctx.fillStyle = '#000';
 ctx.fillRect( 0, 0, w, h );
 anim();
@@ -278,16 +281,14 @@ window.addEventListener( 'resize', function(){
   maxRadius = Math.sqrt( w*w/4 + h*h/4 );
 
 })
-     </script>
-     <style>
-     canvas {
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-     </style>
-     
-     
-      </footer>
+</script>
+    
+    <style>
+        canvas { 
+	       position: absolute;
+	       top: 0;
+	       left: 0;
+        }
+    </style>
 
 </html>
